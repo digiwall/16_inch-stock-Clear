@@ -1,0 +1,97 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: walton walton_rd, walton, LIC=IK1BF-60SLY-Z9WG9-4EZKT-FH8EH-Q6882
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.38.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DARMCM1.DLL V1.19.6.0
+Target DLL:      UL2CM3.DLL V1.164.8.0
+Dialog DLL:      TARMCM1.DLL V1.14.6.0
+ 
+<h2>Project:</h2>
+D:\Projects\Rechargeable Fan\Rechargable_Table_Fan_Controller_Various_Version_23123\_4_Button_Remote_FAN_APM32F0\Examples\TMR2\TMR2_SinglePulse\Project\MDK\TMR2_SinglePulse.uvprojx
+Project File Date:  01/25/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.19', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'TMR2_SinglePulse'
+assembling startup_apm32f0xx.s...
+compiling apm32f00x_iwdt.c...
+compiling apm32f00x_eint.c...
+compiling apm32f00x_buzzer.c...
+compiling apm32f00x_gpio.c...
+compiling system_apm32f00x.c...
+compiling apm32f00x_misc.c...
+compiling apm32f00x_adc.c...
+compiling apm32f00x_i2c.c...
+compiling apm32f00x_tmr2.c...
+compiling apm32f00x_rcm.c...
+compiling apm32f00x_spi.c...
+compiling apm32f00x_fmc.c...
+compiling apm32f00x_wwdt.c...
+compiling apm32f00x_wupt.c...
+compiling apm32f00x_tmr4.c...
+../../Source/main.c(98): error: use of undeclared identifier 'BOARD_KEY1'; did you mean 'BOARD_KEY2'?
+    Board_KeyInit(BOARD_KEY1, DISABLE);
+                  ^~~~~~~~~~
+                  BOARD_KEY2
+../../../../../Board/Board_APM32F003_MINI/Board_APM32F003_MINI.h(54): note: 'BOARD_KEY2' declared here
+    BOARD_KEY2
+    ^
+../../Source/main.c(160): error: use of undeclared identifier 'BOARD_KEY1'; did you mean 'BOARD_KEY2'?
+    if(Board_ReadKeyState(BOARD_KEY1) == BIT_RESET)
+                          ^~~~~~~~~~
+                          BOARD_KEY2
+../../../../../Board/Board_APM32F003_MINI/Board_APM32F003_MINI.h(54): note: 'BOARD_KEY2' declared here
+    BOARD_KEY2
+    ^
+../../Source/main.c(163): error: use of undeclared identifier 'BOARD_KEY1'; did you mean 'BOARD_KEY2'?
+        if(Board_ReadKeyState(BOARD_KEY1) == BIT_RESET)
+                              ^~~~~~~~~~
+                              BOARD_KEY2
+../../../../../Board/Board_APM32F003_MINI/Board_APM32F003_MINI.h(54): note: 'BOARD_KEY2' declared here
+    BOARD_KEY2
+    ^
+../../Source/main.c(165): error: use of undeclared identifier 'BOARD_KEY1'; did you mean 'BOARD_KEY2'?
+            while(Board_ReadKeyState(BOARD_KEY1) == BIT_RESET);
+                                     ^~~~~~~~~~
+                                     BOARD_KEY2
+../../../../../Board/Board_APM32F003_MINI/Board_APM32F003_MINI.h(54): note: 'BOARD_KEY2' declared here
+    BOARD_KEY2
+    ^
+4 errors generated.
+compiling main.c...
+compiling Board.c...
+compiling apm32f00x_int.c...
+compiling apm32f00x_usart.c...
+compiling apm32f00x_tmr1.c...
+".\Objects\TMR2_SinglePulse.axf" - 4 Error(s), 0 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Geehy
+                https://www.geehy.com/uploads/tool/Geehy.APM32F00x_DFP.1.0.4.pack
+                Geehy.APM32F00x_DFP.1.0.4
+                Geehy Semiconductor APM32F00x Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  C:/Users/USER/AppData/Local/Arm/Packs/Geehy/APM32F00x_DFP/1.0.4/Device/Include
+
+<h2>Collection of Component Files used:</h2>
+Target not created.
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>

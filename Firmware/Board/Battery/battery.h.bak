@@ -1,0 +1,33 @@
+
+
+
+ /* Includes ------------------------------------------------------------------*/
+#include "apm32f00x.h"
+#include "apm32f00x_adc.h"
+#include "ADC/adc.h"
+
+
+
+
+//----------------Lead acid battery---------------------------------------------
+//
+#define BAT_VOLTS_CHAN  ADC_CHANNEL_4               // defining the adc channel to read battery volts
+#define AVG_NUM         16               // number of iterations of the adc routine to average the adc readings																			 
+#define BAT_volt_Offset 1               // 
+
+
+
+//#define Battery_type     120         	 //12Voltage of battery
+
+//#define MIN_BAT_VOLTS    110        			//value of battery voltage // this is 11.00 volts          
+//#define MAX_BAT_VOLTS    141        			//value of battery voltage// this is 14.10 volts
+//#define BATT_FLOAT       136        			//battery voltage we want to stop charging at
+//#define HIGH_BAT_VOLTS   130        			//value of battery voltage // this is 13.00 volts 
+#define BAT_VOLT_FAN_OFF   97              //112  //Low voltage disconnect setting for a 12V system
+#define BAT_VOLT_FAN_ON    116        			//Low voltage disconnect setting for a 12V system // only for 49k----10k resister
+//#define BAT_VOLT_FAN_ON  118        			//Low voltage disconnect setting for a 12V system // only for 51k----10k resister
+//#define OFF_NUM         9          			// number of iterations of off charger state
+// 
+
+
+uint16_t getBATvolt(void);

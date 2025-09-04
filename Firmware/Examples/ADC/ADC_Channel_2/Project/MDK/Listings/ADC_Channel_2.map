@@ -1,0 +1,1707 @@
+Component: Arm Compiler for Embedded 6.19 Tool: armlink [5e73cb00]
+
+==============================================================================
+
+Section Cross References
+
+    system_apm32f00x.o(.ARM.exidx.text.SystemInit) refers to system_apm32f00x.o(.text.SystemInit) for [Anonymous Symbol]
+    startup_apm32f0xx.o(RESET) refers to startup_apm32f0xx.o(STACK) for __initial_sp
+    startup_apm32f0xx.o(RESET) refers to startup_apm32f0xx.o(.text) for Reset_Handler
+    startup_apm32f0xx.o(RESET) refers to apm32f00x_int.o(.text.NMI_Handler) for NMI_Handler
+    startup_apm32f0xx.o(RESET) refers to apm32f00x_int.o(.text.HardFault_Handler) for HardFault_Handler
+    startup_apm32f0xx.o(RESET) refers to apm32f00x_int.o(.text.SVC_Handler) for SVC_Handler
+    startup_apm32f0xx.o(RESET) refers to apm32f00x_int.o(.text.PendSV_Handler) for PendSV_Handler
+    startup_apm32f0xx.o(RESET) refers to apm32f00x_int.o(.text.SysTick_Handler) for SysTick_Handler
+    startup_apm32f0xx.o(RESET) refers to apm32f00x_int.o(.text.ADC_IRQHandler) for ADC_IRQHandler
+    startup_apm32f0xx.o(.text) refers to startup_apm32f0xx.o(STACK) for __initial_sp
+    startup_apm32f0xx.o(.text) refers to system_apm32f00x.o(.text.SystemInit) for SystemInit
+    startup_apm32f0xx.o(.text) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    apm32f00x_adc.o(.ARM.exidx.text.ADC_Reset) refers to apm32f00x_adc.o(.text.ADC_Reset) for [Anonymous Symbol]
+    apm32f00x_adc.o(.ARM.exidx.text.ADC_Config) refers to apm32f00x_adc.o(.text.ADC_Config) for [Anonymous Symbol]
+    apm32f00x_adc.o(.ARM.exidx.text.ADC_SetChannel) refers to apm32f00x_adc.o(.text.ADC_SetChannel) for [Anonymous Symbol]
+    apm32f00x_adc.o(.ARM.exidx.text.ADC_ConfigStructInit) refers to apm32f00x_adc.o(.text.ADC_ConfigStructInit) for [Anonymous Symbol]
+    apm32f00x_adc.o(.ARM.exidx.text.ADC_EnableDelay) refers to apm32f00x_adc.o(.text.ADC_EnableDelay) for [Anonymous Symbol]
+    apm32f00x_adc.o(.ARM.exidx.text.ADC_DisableDelay) refers to apm32f00x_adc.o(.text.ADC_DisableDelay) for [Anonymous Symbol]
+    apm32f00x_adc.o(.ARM.exidx.text.ADC_Enable) refers to apm32f00x_adc.o(.text.ADC_Enable) for [Anonymous Symbol]
+    apm32f00x_adc.o(.ARM.exidx.text.ADC_Disable) refers to apm32f00x_adc.o(.text.ADC_Disable) for [Anonymous Symbol]
+    apm32f00x_adc.o(.ARM.exidx.text.ADC_SetMode) refers to apm32f00x_adc.o(.text.ADC_SetMode) for [Anonymous Symbol]
+    apm32f00x_adc.o(.ARM.exidx.text.ADC_ConfigScanMode) refers to apm32f00x_adc.o(.text.ADC_ConfigScanMode) for [Anonymous Symbol]
+    apm32f00x_adc.o(.ARM.exidx.text.ADC_EnableDataBuf) refers to apm32f00x_adc.o(.text.ADC_EnableDataBuf) for [Anonymous Symbol]
+    apm32f00x_adc.o(.ARM.exidx.text.ADC_DisableDataBuf) refers to apm32f00x_adc.o(.text.ADC_DisableDataBuf) for [Anonymous Symbol]
+    apm32f00x_adc.o(.ARM.exidx.text.ADC_EnableInterrupt) refers to apm32f00x_adc.o(.text.ADC_EnableInterrupt) for [Anonymous Symbol]
+    apm32f00x_adc.o(.ARM.exidx.text.ADC_DisableInterrupt) refers to apm32f00x_adc.o(.text.ADC_DisableInterrupt) for [Anonymous Symbol]
+    apm32f00x_adc.o(.ARM.exidx.text.ADC_ConfigDivider) refers to apm32f00x_adc.o(.text.ADC_ConfigDivider) for [Anonymous Symbol]
+    apm32f00x_adc.o(.ARM.exidx.text.ADC_EnableSchmittTrigger) refers to apm32f00x_adc.o(.text.ADC_EnableSchmittTrigger) for [Anonymous Symbol]
+    apm32f00x_adc.o(.ARM.exidx.text.ADC_DisableSchmittTrigger) refers to apm32f00x_adc.o(.text.ADC_DisableSchmittTrigger) for [Anonymous Symbol]
+    apm32f00x_adc.o(.ARM.exidx.text.ADC_ConfigConversionMode) refers to apm32f00x_adc.o(.text.ADC_ConfigConversionMode) for [Anonymous Symbol]
+    apm32f00x_adc.o(.ARM.exidx.text.ADC_ConfigDataAlign) refers to apm32f00x_adc.o(.text.ADC_ConfigDataAlign) for [Anonymous Symbol]
+    apm32f00x_adc.o(.ARM.exidx.text.ADC_SetDiffInputChannel) refers to apm32f00x_adc.o(.text.ADC_SetDiffInputChannel) for [Anonymous Symbol]
+    apm32f00x_adc.o(.ARM.exidx.text.ADC_ConfigExternalTrigger) refers to apm32f00x_adc.o(.text.ADC_ConfigExternalTrigger) for [Anonymous Symbol]
+    apm32f00x_adc.o(.ARM.exidx.text.ADC_StartConversion) refers to apm32f00x_adc.o(.text.ADC_StartConversion) for [Anonymous Symbol]
+    apm32f00x_adc.o(.ARM.exidx.text.ADC_ReadData) refers to apm32f00x_adc.o(.text.ADC_ReadData) for [Anonymous Symbol]
+    apm32f00x_adc.o(.ARM.exidx.text.ADC_EnableAnalogWatchdog) refers to apm32f00x_adc.o(.text.ADC_EnableAnalogWatchdog) for [Anonymous Symbol]
+    apm32f00x_adc.o(.ARM.exidx.text.ADC_DisableAnalogWatchdog) refers to apm32f00x_adc.o(.text.ADC_DisableAnalogWatchdog) for [Anonymous Symbol]
+    apm32f00x_adc.o(.ARM.exidx.text.ADC_SetAWDThresholdHigh) refers to apm32f00x_adc.o(.text.ADC_SetAWDThresholdHigh) for [Anonymous Symbol]
+    apm32f00x_adc.o(.ARM.exidx.text.ADC_SetAWDThresholdLow) refers to apm32f00x_adc.o(.text.ADC_SetAWDThresholdLow) for [Anonymous Symbol]
+    apm32f00x_adc.o(.ARM.exidx.text.ADC_ReadBufferData) refers to apm32f00x_adc.o(.text.ADC_ReadBufferData) for [Anonymous Symbol]
+    apm32f00x_adc.o(.ARM.exidx.text.ADC_ReadAnalogWatchdogStatus) refers to apm32f00x_adc.o(.text.ADC_ReadAnalogWatchdogStatus) for [Anonymous Symbol]
+    apm32f00x_adc.o(.ARM.exidx.text.ADC_ReadStatusFlag) refers to apm32f00x_adc.o(.text.ADC_ReadStatusFlag) for [Anonymous Symbol]
+    apm32f00x_adc.o(.ARM.exidx.text.ADC_ClearStatusFlag) refers to apm32f00x_adc.o(.text.ADC_ClearStatusFlag) for [Anonymous Symbol]
+    apm32f00x_adc.o(.ARM.exidx.text.ADC_ReadIntFlag) refers to apm32f00x_adc.o(.text.ADC_ReadIntFlag) for [Anonymous Symbol]
+    apm32f00x_adc.o(.ARM.exidx.text.ADC_ClearIntFlag) refers to apm32f00x_adc.o(.text.ADC_ClearIntFlag) for [Anonymous Symbol]
+    apm32f00x_adc.o(.ARM.exidx.text.ADC_EnableCompensation) refers to apm32f00x_adc.o(.text.ADC_EnableCompensation) for [Anonymous Symbol]
+    apm32f00x_adc.o(.ARM.exidx.text.ADC_DisableCompensation) refers to apm32f00x_adc.o(.text.ADC_DisableCompensation) for [Anonymous Symbol]
+    apm32f00x_adc.o(.ARM.exidx.text.ADC_ReadOffset) refers to apm32f00x_adc.o(.text.ADC_ReadOffset) for [Anonymous Symbol]
+    apm32f00x_adc.o(.ARM.exidx.text.ADC_SetOffset) refers to apm32f00x_adc.o(.text.ADC_SetOffset) for [Anonymous Symbol]
+    apm32f00x_eint.o(.ARM.exidx.text.EINT_Reset) refers to apm32f00x_eint.o(.text.EINT_Reset) for [Anonymous Symbol]
+    apm32f00x_eint.o(.ARM.exidx.text.EINT_Config) refers to apm32f00x_eint.o(.text.EINT_Config) for [Anonymous Symbol]
+    apm32f00x_eint.o(.ARM.exidx.text.EINT_ClearIntFlag) refers to apm32f00x_eint.o(.text.EINT_ClearIntFlag) for [Anonymous Symbol]
+    apm32f00x_gpio.o(.ARM.exidx.text.GPIO_Reset) refers to apm32f00x_gpio.o(.text.GPIO_Reset) for [Anonymous Symbol]
+    apm32f00x_gpio.o(.ARM.exidx.text.GPIO_Config) refers to apm32f00x_gpio.o(.text.GPIO_Config) for [Anonymous Symbol]
+    apm32f00x_gpio.o(.ARM.exidx.text.GPIO_ConfigStructInit) refers to apm32f00x_gpio.o(.text.GPIO_ConfigStructInit) for [Anonymous Symbol]
+    apm32f00x_gpio.o(.ARM.exidx.text.GPIO_WriteOutputPort) refers to apm32f00x_gpio.o(.text.GPIO_WriteOutputPort) for [Anonymous Symbol]
+    apm32f00x_gpio.o(.ARM.exidx.text.GPIO_SetBit) refers to apm32f00x_gpio.o(.text.GPIO_SetBit) for [Anonymous Symbol]
+    apm32f00x_gpio.o(.ARM.exidx.text.GPIO_ClearBit) refers to apm32f00x_gpio.o(.text.GPIO_ClearBit) for [Anonymous Symbol]
+    apm32f00x_gpio.o(.ARM.exidx.text.GPIO_ReadOutputPort) refers to apm32f00x_gpio.o(.text.GPIO_ReadOutputPort) for [Anonymous Symbol]
+    apm32f00x_gpio.o(.ARM.exidx.text.GPIO_ReadInputPort) refers to apm32f00x_gpio.o(.text.GPIO_ReadInputPort) for [Anonymous Symbol]
+    apm32f00x_gpio.o(.ARM.exidx.text.GPIO_ReadInputBit) refers to apm32f00x_gpio.o(.text.GPIO_ReadInputBit) for [Anonymous Symbol]
+    apm32f00x_gpio.o(.ARM.exidx.text.GPIO_Toggle) refers to apm32f00x_gpio.o(.text.GPIO_Toggle) for [Anonymous Symbol]
+    apm32f00x_gpio.o(.ARM.exidx.text.GPIO_EnableSWD) refers to apm32f00x_gpio.o(.text.GPIO_EnableSWD) for [Anonymous Symbol]
+    apm32f00x_gpio.o(.ARM.exidx.text.GPIO_DisableSWD) refers to apm32f00x_gpio.o(.text.GPIO_DisableSWD) for [Anonymous Symbol]
+    apm32f00x_misc.o(.ARM.exidx.text.NVIC_EnableIRQRequest) refers to apm32f00x_misc.o(.text.NVIC_EnableIRQRequest) for [Anonymous Symbol]
+    apm32f00x_misc.o(.ARM.exidx.text.NVIC_DisableIRQRequest) refers to apm32f00x_misc.o(.text.NVIC_DisableIRQRequest) for [Anonymous Symbol]
+    apm32f00x_misc.o(.ARM.exidx.text.PMU_EnterWaitMode) refers to apm32f00x_misc.o(.text.PMU_EnterWaitMode) for [Anonymous Symbol]
+    apm32f00x_misc.o(.ARM.exidx.text.PMU_EnterHaltModeWFI) refers to apm32f00x_misc.o(.text.PMU_EnterHaltModeWFI) for [Anonymous Symbol]
+    apm32f00x_misc.o(.ARM.exidx.text.PMU_EnterHaltModeWFE) refers to apm32f00x_misc.o(.text.PMU_EnterHaltModeWFE) for [Anonymous Symbol]
+    apm32f00x_buzzer.o(.ARM.exidx.text.BUZZER_Reset) refers to apm32f00x_buzzer.o(.text.BUZZER_Reset) for [Anonymous Symbol]
+    apm32f00x_buzzer.o(.ARM.exidx.text.BUZZER_Config) refers to apm32f00x_buzzer.o(.text.BUZZER_Config) for [Anonymous Symbol]
+    apm32f00x_buzzer.o(.ARM.exidx.text.BUZZER_Enable) refers to apm32f00x_buzzer.o(.text.BUZZER_Enable) for [Anonymous Symbol]
+    apm32f00x_buzzer.o(.ARM.exidx.text.BUZZER_Disable) refers to apm32f00x_buzzer.o(.text.BUZZER_Disable) for [Anonymous Symbol]
+    apm32f00x_buzzer.o(.text.BUZZER_CalibrationLIRC) refers to uidiv_div0.o(.text) for __aeabi_uidiv
+    apm32f00x_buzzer.o(.ARM.exidx.text.BUZZER_CalibrationLIRC) refers to apm32f00x_buzzer.o(.text.BUZZER_CalibrationLIRC) for [Anonymous Symbol]
+    apm32f00x_fmc.o(.ARM.exidx.text.FMC_SetLatency) refers to apm32f00x_fmc.o(.text.FMC_SetLatency) for [Anonymous Symbol]
+    apm32f00x_fmc.o(.ARM.exidx.text.FMC_EnableHlafCycleAccess) refers to apm32f00x_fmc.o(.text.FMC_EnableHlafCycleAccess) for [Anonymous Symbol]
+    apm32f00x_fmc.o(.ARM.exidx.text.FMC_DisableHlafCycleAccess) refers to apm32f00x_fmc.o(.text.FMC_DisableHlafCycleAccess) for [Anonymous Symbol]
+    apm32f00x_fmc.o(.ARM.exidx.text.FMC_EnablePrefetchBuffer) refers to apm32f00x_fmc.o(.text.FMC_EnablePrefetchBuffer) for [Anonymous Symbol]
+    apm32f00x_fmc.o(.ARM.exidx.text.FMC_DisablePrefetchBuffer) refers to apm32f00x_fmc.o(.text.FMC_DisablePrefetchBuffer) for [Anonymous Symbol]
+    apm32f00x_fmc.o(.ARM.exidx.text.FMC_Unlock) refers to apm32f00x_fmc.o(.text.FMC_Unlock) for [Anonymous Symbol]
+    apm32f00x_fmc.o(.ARM.exidx.text.FMC_Lock) refers to apm32f00x_fmc.o(.text.FMC_Lock) for [Anonymous Symbol]
+    apm32f00x_fmc.o(.ARM.exidx.text.FMC_ReadState) refers to apm32f00x_fmc.o(.text.FMC_ReadState) for [Anonymous Symbol]
+    apm32f00x_fmc.o(.ARM.exidx.text.FMC_WaitForReady) refers to apm32f00x_fmc.o(.text.FMC_WaitForReady) for [Anonymous Symbol]
+    apm32f00x_fmc.o(.ARM.exidx.text.FMC_ErasePage) refers to apm32f00x_fmc.o(.text.FMC_ErasePage) for [Anonymous Symbol]
+    apm32f00x_fmc.o(.ARM.exidx.text.FMC_EraseAllPages) refers to apm32f00x_fmc.o(.text.FMC_EraseAllPages) for [Anonymous Symbol]
+    apm32f00x_fmc.o(.ARM.exidx.text.FMC_EraseOptionByte) refers to apm32f00x_fmc.o(.text.FMC_EraseOptionByte) for [Anonymous Symbol]
+    apm32f00x_fmc.o(.ARM.exidx.text.FMC_ProgramWord) refers to apm32f00x_fmc.o(.text.FMC_ProgramWord) for [Anonymous Symbol]
+    apm32f00x_fmc.o(.ARM.exidx.text.FMC_ProgramHalfWord) refers to apm32f00x_fmc.o(.text.FMC_ProgramHalfWord) for [Anonymous Symbol]
+    apm32f00x_fmc.o(.ARM.exidx.text.FMC_ProgramOptionByte) refers to apm32f00x_fmc.o(.text.FMC_ProgramOptionByte) for [Anonymous Symbol]
+    apm32f00x_fmc.o(.ARM.exidx.text.FMC_EnableWriteProtection) refers to apm32f00x_fmc.o(.text.FMC_EnableWriteProtection) for [Anonymous Symbol]
+    apm32f00x_fmc.o(.ARM.exidx.text.FMC_ConfigReadOutProtection) refers to apm32f00x_fmc.o(.text.FMC_ConfigReadOutProtection) for [Anonymous Symbol]
+    apm32f00x_fmc.o(.ARM.exidx.text.FMC_ConfigOptionByteUser) refers to apm32f00x_fmc.o(.text.FMC_ConfigOptionByteUser) for [Anonymous Symbol]
+    apm32f00x_fmc.o(.ARM.exidx.text.FMC_ConfigOptionByteAFR) refers to apm32f00x_fmc.o(.text.FMC_ConfigOptionByteAFR) for [Anonymous Symbol]
+    apm32f00x_fmc.o(.ARM.exidx.text.FMC_ConfigOptionByteClk) refers to apm32f00x_fmc.o(.text.FMC_ConfigOptionByteClk) for [Anonymous Symbol]
+    apm32f00x_fmc.o(.ARM.exidx.text.FMC_ConfigOptionByteHXTCNT) refers to apm32f00x_fmc.o(.text.FMC_ConfigOptionByteHXTCNT) for [Anonymous Symbol]
+    apm32f00x_fmc.o(.ARM.exidx.text.FMC_ReadOptionByteUser) refers to apm32f00x_fmc.o(.text.FMC_ReadOptionByteUser) for [Anonymous Symbol]
+    apm32f00x_fmc.o(.ARM.exidx.text.FMC_ReadOptionByteWriteProtection) refers to apm32f00x_fmc.o(.text.FMC_ReadOptionByteWriteProtection) for [Anonymous Symbol]
+    apm32f00x_fmc.o(.ARM.exidx.text.FMC_ReadProtectionStatus) refers to apm32f00x_fmc.o(.text.FMC_ReadProtectionStatus) for [Anonymous Symbol]
+    apm32f00x_fmc.o(.ARM.exidx.text.FMC_ReadPrefetchBufferStatus) refers to apm32f00x_fmc.o(.text.FMC_ReadPrefetchBufferStatus) for [Anonymous Symbol]
+    apm32f00x_fmc.o(.ARM.exidx.text.FMC_EnableInterrupt) refers to apm32f00x_fmc.o(.text.FMC_EnableInterrupt) for [Anonymous Symbol]
+    apm32f00x_fmc.o(.ARM.exidx.text.FMC_DisableInterrupt) refers to apm32f00x_fmc.o(.text.FMC_DisableInterrupt) for [Anonymous Symbol]
+    apm32f00x_fmc.o(.ARM.exidx.text.FMC_ReadStatusFlag) refers to apm32f00x_fmc.o(.text.FMC_ReadStatusFlag) for [Anonymous Symbol]
+    apm32f00x_fmc.o(.ARM.exidx.text.FMC_ClearStatusFlag) refers to apm32f00x_fmc.o(.text.FMC_ClearStatusFlag) for [Anonymous Symbol]
+    apm32f00x_fmc.o(.ARM.exidx.text.FMC_EnablePowerDownHaltMode) refers to apm32f00x_fmc.o(.text.FMC_EnablePowerDownHaltMode) for [Anonymous Symbol]
+    apm32f00x_fmc.o(.ARM.exidx.text.FMC_DisablePowerDownHaltMode) refers to apm32f00x_fmc.o(.text.FMC_DisablePowerDownHaltMode) for [Anonymous Symbol]
+    apm32f00x_fmc.o(.ARM.exidx.text.FMC_EnablePowerDownActHaltMode) refers to apm32f00x_fmc.o(.text.FMC_EnablePowerDownActHaltMode) for [Anonymous Symbol]
+    apm32f00x_fmc.o(.ARM.exidx.text.FMC_DisablePowerDownActHaltMode) refers to apm32f00x_fmc.o(.text.FMC_DisablePowerDownActHaltMode) for [Anonymous Symbol]
+    apm32f00x_fmc.o(.ARM.exidx.text.FMC_SetPowerOnTime) refers to apm32f00x_fmc.o(.text.FMC_SetPowerOnTime) for [Anonymous Symbol]
+    apm32f00x_i2c.o(.ARM.exidx.text.I2C_Reset) refers to apm32f00x_i2c.o(.text.I2C_Reset) for [Anonymous Symbol]
+    apm32f00x_i2c.o(.text.I2C_Config) refers to uidiv_div0.o(.text) for __aeabi_uidiv
+    apm32f00x_i2c.o(.ARM.exidx.text.I2C_Config) refers to apm32f00x_i2c.o(.text.I2C_Config) for [Anonymous Symbol]
+    apm32f00x_i2c.o(.ARM.exidx.text.I2C_ConfigStructInit) refers to apm32f00x_i2c.o(.text.I2C_ConfigStructInit) for [Anonymous Symbol]
+    apm32f00x_i2c.o(.ARM.exidx.text.I2C_Enable) refers to apm32f00x_i2c.o(.text.I2C_Enable) for [Anonymous Symbol]
+    apm32f00x_i2c.o(.ARM.exidx.text.I2C_Disable) refers to apm32f00x_i2c.o(.text.I2C_Disable) for [Anonymous Symbol]
+    apm32f00x_i2c.o(.ARM.exidx.text.I2C_DisableBroadcastCall) refers to apm32f00x_i2c.o(.text.I2C_DisableBroadcastCall) for [Anonymous Symbol]
+    apm32f00x_i2c.o(.ARM.exidx.text.I2C_EnableBroadcastCall) refers to apm32f00x_i2c.o(.text.I2C_EnableBroadcastCall) for [Anonymous Symbol]
+    apm32f00x_i2c.o(.ARM.exidx.text.I2C_EnableGenerateStart) refers to apm32f00x_i2c.o(.text.I2C_EnableGenerateStart) for [Anonymous Symbol]
+    apm32f00x_i2c.o(.ARM.exidx.text.I2C_DisableGenerateStart) refers to apm32f00x_i2c.o(.text.I2C_DisableGenerateStart) for [Anonymous Symbol]
+    apm32f00x_i2c.o(.ARM.exidx.text.I2C_EnableGenerateStop) refers to apm32f00x_i2c.o(.text.I2C_EnableGenerateStop) for [Anonymous Symbol]
+    apm32f00x_i2c.o(.ARM.exidx.text.I2C_DisableGenerateStop) refers to apm32f00x_i2c.o(.text.I2C_DisableGenerateStop) for [Anonymous Symbol]
+    apm32f00x_i2c.o(.ARM.exidx.text.I2C_EnableSoftwareReset) refers to apm32f00x_i2c.o(.text.I2C_EnableSoftwareReset) for [Anonymous Symbol]
+    apm32f00x_i2c.o(.ARM.exidx.text.I2C_DisableSoftwareReset) refers to apm32f00x_i2c.o(.text.I2C_DisableSoftwareReset) for [Anonymous Symbol]
+    apm32f00x_i2c.o(.ARM.exidx.text.I2C_EnableStretchClock) refers to apm32f00x_i2c.o(.text.I2C_EnableStretchClock) for [Anonymous Symbol]
+    apm32f00x_i2c.o(.ARM.exidx.text.I2C_DisableStretchClock) refers to apm32f00x_i2c.o(.text.I2C_DisableStretchClock) for [Anonymous Symbol]
+    apm32f00x_i2c.o(.ARM.exidx.text.I2C_ConfigAcknowledge) refers to apm32f00x_i2c.o(.text.I2C_ConfigAcknowledge) for [Anonymous Symbol]
+    apm32f00x_i2c.o(.ARM.exidx.text.I2C_EnableInterrupt) refers to apm32f00x_i2c.o(.text.I2C_EnableInterrupt) for [Anonymous Symbol]
+    apm32f00x_i2c.o(.ARM.exidx.text.I2C_DisableInterrupt) refers to apm32f00x_i2c.o(.text.I2C_DisableInterrupt) for [Anonymous Symbol]
+    apm32f00x_i2c.o(.ARM.exidx.text.I2C_ConfigDutyCycle) refers to apm32f00x_i2c.o(.text.I2C_ConfigDutyCycle) for [Anonymous Symbol]
+    apm32f00x_i2c.o(.ARM.exidx.text.I2C_RxData) refers to apm32f00x_i2c.o(.text.I2C_RxData) for [Anonymous Symbol]
+    apm32f00x_i2c.o(.ARM.exidx.text.I2C_TxAddress7Bit) refers to apm32f00x_i2c.o(.text.I2C_TxAddress7Bit) for [Anonymous Symbol]
+    apm32f00x_i2c.o(.ARM.exidx.text.I2C_TxData) refers to apm32f00x_i2c.o(.text.I2C_TxData) for [Anonymous Symbol]
+    apm32f00x_i2c.o(.ARM.exidx.text.I2C_ReadStatusFlag) refers to apm32f00x_i2c.o(.text.I2C_ReadStatusFlag) for [Anonymous Symbol]
+    apm32f00x_i2c.o(.ARM.exidx.text.I2C_ClearStatusFlag) refers to apm32f00x_i2c.o(.text.I2C_ClearStatusFlag) for [Anonymous Symbol]
+    apm32f00x_i2c.o(.ARM.exidx.text.I2C_ReadIntFlag) refers to apm32f00x_i2c.o(.text.I2C_ReadIntFlag) for [Anonymous Symbol]
+    apm32f00x_i2c.o(.ARM.exidx.text.I2C_ClearIntFlag) refers to apm32f00x_i2c.o(.text.I2C_ClearIntFlag) for [Anonymous Symbol]
+    apm32f00x_iwdt.o(.ARM.exidx.text.IWDT_EnableWriteAccess) refers to apm32f00x_iwdt.o(.text.IWDT_EnableWriteAccess) for [Anonymous Symbol]
+    apm32f00x_iwdt.o(.ARM.exidx.text.IWDT_DisableWriteAccess) refers to apm32f00x_iwdt.o(.text.IWDT_DisableWriteAccess) for [Anonymous Symbol]
+    apm32f00x_iwdt.o(.ARM.exidx.text.IWDT_SetDivider) refers to apm32f00x_iwdt.o(.text.IWDT_SetDivider) for [Anonymous Symbol]
+    apm32f00x_iwdt.o(.ARM.exidx.text.IWDT_SetReloadCounter) refers to apm32f00x_iwdt.o(.text.IWDT_SetReloadCounter) for [Anonymous Symbol]
+    apm32f00x_iwdt.o(.ARM.exidx.text.IWDT_ReloadCounter) refers to apm32f00x_iwdt.o(.text.IWDT_ReloadCounter) for [Anonymous Symbol]
+    apm32f00x_iwdt.o(.ARM.exidx.text.IWDT_Enable) refers to apm32f00x_iwdt.o(.text.IWDT_Enable) for [Anonymous Symbol]
+    apm32f00x_rcm.o(.ARM.exidx.text.RCM_Reset) refers to apm32f00x_rcm.o(.text.RCM_Reset) for [Anonymous Symbol]
+    apm32f00x_rcm.o(.ARM.exidx.text.RCM_EnableFastWakeup) refers to apm32f00x_rcm.o(.text.RCM_EnableFastWakeup) for [Anonymous Symbol]
+    apm32f00x_rcm.o(.ARM.exidx.text.RCM_DisableFastWakeup) refers to apm32f00x_rcm.o(.text.RCM_DisableFastWakeup) for [Anonymous Symbol]
+    apm32f00x_rcm.o(.ARM.exidx.text.RCM_EnableHXT) refers to apm32f00x_rcm.o(.text.RCM_EnableHXT) for [Anonymous Symbol]
+    apm32f00x_rcm.o(.ARM.exidx.text.RCM_DisableHXT) refers to apm32f00x_rcm.o(.text.RCM_DisableHXT) for [Anonymous Symbol]
+    apm32f00x_rcm.o(.ARM.exidx.text.RCM_EnableHIRC) refers to apm32f00x_rcm.o(.text.RCM_EnableHIRC) for [Anonymous Symbol]
+    apm32f00x_rcm.o(.ARM.exidx.text.RCM_DisableHIRC) refers to apm32f00x_rcm.o(.text.RCM_DisableHIRC) for [Anonymous Symbol]
+    apm32f00x_rcm.o(.ARM.exidx.text.RCM_EnableLIRC) refers to apm32f00x_rcm.o(.text.RCM_EnableLIRC) for [Anonymous Symbol]
+    apm32f00x_rcm.o(.ARM.exidx.text.RCM_DisableLIRC) refers to apm32f00x_rcm.o(.text.RCM_DisableLIRC) for [Anonymous Symbol]
+    apm32f00x_rcm.o(.ARM.exidx.text.RCM_EnableClockOutput) refers to apm32f00x_rcm.o(.text.RCM_EnableClockOutput) for [Anonymous Symbol]
+    apm32f00x_rcm.o(.ARM.exidx.text.RCM_DisableClockOutput) refers to apm32f00x_rcm.o(.text.RCM_DisableClockOutput) for [Anonymous Symbol]
+    apm32f00x_rcm.o(.ARM.exidx.text.RCM_EnableClockSwitch) refers to apm32f00x_rcm.o(.text.RCM_EnableClockSwitch) for [Anonymous Symbol]
+    apm32f00x_rcm.o(.ARM.exidx.text.RCM_DisableClockSwitch) refers to apm32f00x_rcm.o(.text.RCM_DisableClockSwitch) for [Anonymous Symbol]
+    apm32f00x_rcm.o(.ARM.exidx.text.RCM_ConfigRegulatorPower) refers to apm32f00x_rcm.o(.text.RCM_ConfigRegulatorPower) for [Anonymous Symbol]
+    apm32f00x_rcm.o(.ARM.exidx.text.RCM_EnableAPBPeriphClock) refers to apm32f00x_rcm.o(.text.RCM_EnableAPBPeriphClock) for [Anonymous Symbol]
+    apm32f00x_rcm.o(.ARM.exidx.text.RCM_DisableAPBPeriphClock) refers to apm32f00x_rcm.o(.text.RCM_DisableAPBPeriphClock) for [Anonymous Symbol]
+    apm32f00x_rcm.o(.ARM.exidx.text.RCM_ConfigClockSwitch) refers to apm32f00x_rcm.o(.text.RCM_ConfigClockSwitch) for [Anonymous Symbol]
+    apm32f00x_rcm.o(.ARM.exidx.text.RCM_ConfigHIRCDiv) refers to apm32f00x_rcm.o(.text.RCM_ConfigHIRCDiv) for [Anonymous Symbol]
+    apm32f00x_rcm.o(.ARM.exidx.text.RCM_ConfigCPUClkDiv) refers to apm32f00x_rcm.o(.text.RCM_ConfigCPUClkDiv) for [Anonymous Symbol]
+    apm32f00x_rcm.o(.ARM.exidx.text.RCM_ConfigClockOutput) refers to apm32f00x_rcm.o(.text.RCM_ConfigClockOutput) for [Anonymous Symbol]
+    apm32f00x_rcm.o(.ARM.exidx.text.RCM_EnableInterrupt) refers to apm32f00x_rcm.o(.text.RCM_EnableInterrupt) for [Anonymous Symbol]
+    apm32f00x_rcm.o(.ARM.exidx.text.RCM_DisableInterrupt) refers to apm32f00x_rcm.o(.text.RCM_DisableInterrupt) for [Anonymous Symbol]
+    apm32f00x_rcm.o(.ARM.exidx.text.RCM_EnableClockSecuritySystem) refers to apm32f00x_rcm.o(.text.RCM_EnableClockSecuritySystem) for [Anonymous Symbol]
+    apm32f00x_rcm.o(.ARM.exidx.text.RCM_GetMasterClockSource) refers to apm32f00x_rcm.o(.text.RCM_GetMasterClockSource) for [Anonymous Symbol]
+    apm32f00x_rcm.o(.text.RCM_GetMasterClockFreq) refers to uidiv_div0.o(.text) for __aeabi_uidiv
+    apm32f00x_rcm.o(.ARM.exidx.text.RCM_GetMasterClockFreq) refers to apm32f00x_rcm.o(.text.RCM_GetMasterClockFreq) for [Anonymous Symbol]
+    apm32f00x_rcm.o(.ARM.exidx.text.RCM_SetHIRCTrim) refers to apm32f00x_rcm.o(.text.RCM_SetHIRCTrim) for [Anonymous Symbol]
+    apm32f00x_rcm.o(.ARM.exidx.text.RCM_ResetClockSwitch) refers to apm32f00x_rcm.o(.text.RCM_ResetClockSwitch) for [Anonymous Symbol]
+    apm32f00x_rcm.o(.ARM.exidx.text.RCM_ReadClockFlag) refers to apm32f00x_rcm.o(.text.RCM_ReadClockFlag) for [Anonymous Symbol]
+    apm32f00x_rcm.o(.ARM.exidx.text.RCM_ReadIntFlag) refers to apm32f00x_rcm.o(.text.RCM_ReadIntFlag) for [Anonymous Symbol]
+    apm32f00x_rcm.o(.ARM.exidx.text.RCM_ClearIntFlag) refers to apm32f00x_rcm.o(.text.RCM_ClearIntFlag) for [Anonymous Symbol]
+    apm32f00x_rcm.o(.ARM.exidx.text.RCM_ReadResetFlag) refers to apm32f00x_rcm.o(.text.RCM_ReadResetFlag) for [Anonymous Symbol]
+    apm32f00x_rcm.o(.ARM.exidx.text.RCM_ClearResetFlag) refers to apm32f00x_rcm.o(.text.RCM_ClearResetFlag) for [Anonymous Symbol]
+    apm32f00x_spi.o(.ARM.exidx.text.SPI_Reset) refers to apm32f00x_spi.o(.text.SPI_Reset) for [Anonymous Symbol]
+    apm32f00x_spi.o(.ARM.exidx.text.SPI_Config) refers to apm32f00x_spi.o(.text.SPI_Config) for [Anonymous Symbol]
+    apm32f00x_spi.o(.ARM.exidx.text.SPI_ConfigStructInit) refers to apm32f00x_spi.o(.text.SPI_ConfigStructInit) for [Anonymous Symbol]
+    apm32f00x_spi.o(.ARM.exidx.text.SPI_Enable) refers to apm32f00x_spi.o(.text.SPI_Enable) for [Anonymous Symbol]
+    apm32f00x_spi.o(.ARM.exidx.text.SPI_Disable) refers to apm32f00x_spi.o(.text.SPI_Disable) for [Anonymous Symbol]
+    apm32f00x_spi.o(.ARM.exidx.text.SPI_ConfigMode) refers to apm32f00x_spi.o(.text.SPI_ConfigMode) for [Anonymous Symbol]
+    apm32f00x_spi.o(.ARM.exidx.text.SPI_EnableInterrupt) refers to apm32f00x_spi.o(.text.SPI_EnableInterrupt) for [Anonymous Symbol]
+    apm32f00x_spi.o(.ARM.exidx.text.SPI_DisableInterrupt) refers to apm32f00x_spi.o(.text.SPI_DisableInterrupt) for [Anonymous Symbol]
+    apm32f00x_spi.o(.ARM.exidx.text.SPI_TxData) refers to apm32f00x_spi.o(.text.SPI_TxData) for [Anonymous Symbol]
+    apm32f00x_spi.o(.ARM.exidx.text.SPI_RxData) refers to apm32f00x_spi.o(.text.SPI_RxData) for [Anonymous Symbol]
+    apm32f00x_spi.o(.ARM.exidx.text.SPI_EnableSlaveSoftwareControl) refers to apm32f00x_spi.o(.text.SPI_EnableSlaveSoftwareControl) for [Anonymous Symbol]
+    apm32f00x_spi.o(.ARM.exidx.text.SPI_DisableSlaveSoftwareControl) refers to apm32f00x_spi.o(.text.SPI_DisableSlaveSoftwareControl) for [Anonymous Symbol]
+    apm32f00x_spi.o(.ARM.exidx.text.SPI_TxCRC) refers to apm32f00x_spi.o(.text.SPI_TxCRC) for [Anonymous Symbol]
+    apm32f00x_spi.o(.ARM.exidx.text.SPI_EnableCRC) refers to apm32f00x_spi.o(.text.SPI_EnableCRC) for [Anonymous Symbol]
+    apm32f00x_spi.o(.ARM.exidx.text.SPI_DisableCRC) refers to apm32f00x_spi.o(.text.SPI_DisableCRC) for [Anonymous Symbol]
+    apm32f00x_spi.o(.ARM.exidx.text.SPI_ReadRxCRC) refers to apm32f00x_spi.o(.text.SPI_ReadRxCRC) for [Anonymous Symbol]
+    apm32f00x_spi.o(.ARM.exidx.text.SPI_ReadTxCRC) refers to apm32f00x_spi.o(.text.SPI_ReadTxCRC) for [Anonymous Symbol]
+    apm32f00x_spi.o(.ARM.exidx.text.SPI_SetCRCPolynomial) refers to apm32f00x_spi.o(.text.SPI_SetCRCPolynomial) for [Anonymous Symbol]
+    apm32f00x_spi.o(.ARM.exidx.text.SPI_ReadCRCPolynomial) refers to apm32f00x_spi.o(.text.SPI_ReadCRCPolynomial) for [Anonymous Symbol]
+    apm32f00x_spi.o(.ARM.exidx.text.SPI_ReadStatusFlag) refers to apm32f00x_spi.o(.text.SPI_ReadStatusFlag) for [Anonymous Symbol]
+    apm32f00x_spi.o(.ARM.exidx.text.SPI_ClearStatusFlag) refers to apm32f00x_spi.o(.text.SPI_ClearStatusFlag) for [Anonymous Symbol]
+    apm32f00x_spi.o(.ARM.exidx.text.SPI_ReadIntFlag) refers to apm32f00x_spi.o(.text.SPI_ReadIntFlag) for [Anonymous Symbol]
+    apm32f00x_spi.o(.ARM.exidx.text.SPI_ClearIntFlag) refers to apm32f00x_spi.o(.text.SPI_ClearIntFlag) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_Reset) refers to apm32f00x_tmr1.o(.text.TMR1_Reset) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigTimerBase) refers to apm32f00x_tmr1.o(.text.TMR1_ConfigTimerBase) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigTimeBaseStructInit) refers to apm32f00x_tmr1.o(.text.TMR1_ConfigTimeBaseStructInit) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_EnableChannel) refers to apm32f00x_tmr1.o(.text.TMR1_EnableChannel) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_DisableChannel) refers to apm32f00x_tmr1.o(.text.TMR1_DisableChannel) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigOutputComare1) refers to apm32f00x_tmr1.o(.text.TMR1_ConfigOutputComare1) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigOutputComare2) refers to apm32f00x_tmr1.o(.text.TMR1_ConfigOutputComare2) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigOutputComare3) refers to apm32f00x_tmr1.o(.text.TMR1_ConfigOutputComare3) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigOutputComare4) refers to apm32f00x_tmr1.o(.text.TMR1_ConfigOutputComare4) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigOutputCompare) refers to apm32f00x_tmr1.o(.text.TMR1_ConfigOutputCompare) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_OCStructInit) refers to apm32f00x_tmr1.o(.text.TMR1_OCStructInit) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigOutputCompareMode) refers to apm32f00x_tmr1.o(.text.TMR1_ConfigOutputCompareMode) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigInputCapture1) refers to apm32f00x_tmr1.o(.text.TMR1_ConfigInputCapture1) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigInputCapture2) refers to apm32f00x_tmr1.o(.text.TMR1_ConfigInputCapture2) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigInputCapture3) refers to apm32f00x_tmr1.o(.text.TMR1_ConfigInputCapture3) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigInputCapture4) refers to apm32f00x_tmr1.o(.text.TMR1_ConfigInputCapture4) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigInputCapture) refers to apm32f00x_tmr1.o(.text.TMR1_ConfigInputCapture) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ICStructInit) refers to apm32f00x_tmr1.o(.text.TMR1_ICStructInit) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_SetDeadTime) refers to apm32f00x_tmr1.o(.text.TMR1_SetDeadTime) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigProtectionLevel) refers to apm32f00x_tmr1.o(.text.TMR1_ConfigProtectionLevel) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_SelectOffStateInRunMode) refers to apm32f00x_tmr1.o(.text.TMR1_SelectOffStateInRunMode) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_SelectOffStateInIdleMode) refers to apm32f00x_tmr1.o(.text.TMR1_SelectOffStateInIdleMode) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigBreakPolarity) refers to apm32f00x_tmr1.o(.text.TMR1_ConfigBreakPolarity) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_EnableBreak) refers to apm32f00x_tmr1.o(.text.TMR1_EnableBreak) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_DisableBreak) refers to apm32f00x_tmr1.o(.text.TMR1_DisableBreak) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_EnableAutomaticOutput) refers to apm32f00x_tmr1.o(.text.TMR1_EnableAutomaticOutput) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_DisableAutomaticOutput) refers to apm32f00x_tmr1.o(.text.TMR1_DisableAutomaticOutput) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigInputPWM) refers to apm32f00x_tmr1.o(.text.TMR1_ConfigInputPWM) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_Enable) refers to apm32f00x_tmr1.o(.text.TMR1_Enable) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_Disable) refers to apm32f00x_tmr1.o(.text.TMR1_Disable) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_EnableOutputPWM) refers to apm32f00x_tmr1.o(.text.TMR1_EnableOutputPWM) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_DisableOutputPWM) refers to apm32f00x_tmr1.o(.text.TMR1_DisableOutputPWM) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_EnableInterrupt) refers to apm32f00x_tmr1.o(.text.TMR1_EnableInterrupt) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_DisableInterrupt) refers to apm32f00x_tmr1.o(.text.TMR1_DisableInterrupt) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigExternalTrigger) refers to apm32f00x_tmr1.o(.text.TMR1_ConfigExternalTrigger) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigExternalClockMode2) refers to apm32f00x_tmr1.o(.text.TMR1_ConfigExternalClockMode2) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigExternalClockMode1) refers to apm32f00x_tmr1.o(.text.TMR1_ConfigExternalClockMode1) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigCountMode) refers to apm32f00x_tmr1.o(.text.TMR1_ConfigCountMode) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_SetDivider) refers to apm32f00x_tmr1.o(.text.TMR1_SetDivider) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_EnableSinglePulseMode) refers to apm32f00x_tmr1.o(.text.TMR1_EnableSinglePulseMode) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_DisableSinglePulseMode) refers to apm32f00x_tmr1.o(.text.TMR1_DisableSinglePulseMode) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigUpdate) refers to apm32f00x_tmr1.o(.text.TMR1_ConfigUpdate) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigInputTrigger) refers to apm32f00x_tmr1.o(.text.TMR1_ConfigInputTrigger) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigEncodeInterface) refers to apm32f00x_tmr1.o(.text.TMR1_ConfigEncodeInterface) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigCCUpdateSource) refers to apm32f00x_tmr1.o(.text.TMR1_ConfigCCUpdateSource) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_EnableCompareCaptureBuffer) refers to apm32f00x_tmr1.o(.text.TMR1_EnableCompareCaptureBuffer) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_DisableCompareCaptureBuffer) refers to apm32f00x_tmr1.o(.text.TMR1_DisableCompareCaptureBuffer) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_EnableAutoReloadBuffer) refers to apm32f00x_tmr1.o(.text.TMR1_EnableAutoReloadBuffer) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_DisableAutoReloadBuffer) refers to apm32f00x_tmr1.o(.text.TMR1_DisableAutoReloadBuffer) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_EnableOutputCompareBuffer) refers to apm32f00x_tmr1.o(.text.TMR1_EnableOutputCompareBuffer) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_DisableOutputCompareBuffer) refers to apm32f00x_tmr1.o(.text.TMR1_DisableOutputCompareBuffer) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_EnableOutputCompareFastMode) refers to apm32f00x_tmr1.o(.text.TMR1_EnableOutputCompareFastMode) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_DisableOutputCompareFastMode) refers to apm32f00x_tmr1.o(.text.TMR1_DisableOutputCompareFastMode) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_GenerateEvent) refers to apm32f00x_tmr1.o(.text.TMR1_GenerateEvent) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigOutputComparePolarity) refers to apm32f00x_tmr1.o(.text.TMR1_ConfigOutputComparePolarity) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigOutputCompareComplementPolarity) refers to apm32f00x_tmr1.o(.text.TMR1_ConfigOutputCompareComplementPolarity) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_EnableCompareCapture) refers to apm32f00x_tmr1.o(.text.TMR1_EnableCompareCapture) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_DisableCompareCapture) refers to apm32f00x_tmr1.o(.text.TMR1_DisableCompareCapture) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_EnableCompareCaptureComplement) refers to apm32f00x_tmr1.o(.text.TMR1_EnableCompareCaptureComplement) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_DisableCompareCaptureComplement) refers to apm32f00x_tmr1.o(.text.TMR1_DisableCompareCaptureComplement) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_SetCounter) refers to apm32f00x_tmr1.o(.text.TMR1_SetCounter) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_SetAutoReloadVaue) refers to apm32f00x_tmr1.o(.text.TMR1_SetAutoReloadVaue) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_SetCompareCapture) refers to apm32f00x_tmr1.o(.text.TMR1_SetCompareCapture) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ReadCapture1) refers to apm32f00x_tmr1.o(.text.TMR1_ReadCapture1) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ReadCapture2) refers to apm32f00x_tmr1.o(.text.TMR1_ReadCapture2) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ReadCapture3) refers to apm32f00x_tmr1.o(.text.TMR1_ReadCapture3) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ReadCapture4) refers to apm32f00x_tmr1.o(.text.TMR1_ReadCapture4) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ReadCompareCapture) refers to apm32f00x_tmr1.o(.text.TMR1_ReadCompareCapture) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_SetInputCaptureDivider) refers to apm32f00x_tmr1.o(.text.TMR1_SetInputCaptureDivider) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ReadCounter) refers to apm32f00x_tmr1.o(.text.TMR1_ReadCounter) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ReadDivider) refers to apm32f00x_tmr1.o(.text.TMR1_ReadDivider) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ReadStatusFlag) refers to apm32f00x_tmr1.o(.text.TMR1_ReadStatusFlag) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ClearStatusFlag) refers to apm32f00x_tmr1.o(.text.TMR1_ClearStatusFlag) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ReadIntFlag) refers to apm32f00x_tmr1.o(.text.TMR1_ReadIntFlag) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ClearIntFlag) refers to apm32f00x_tmr1.o(.text.TMR1_ClearIntFlag) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigSlaveMode) refers to apm32f00x_tmr1.o(.text.TMR1_ConfigSlaveMode) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigMasterMode) refers to apm32f00x_tmr1.o(.text.TMR1_ConfigMasterMode) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_EnableMasterMode) refers to apm32f00x_tmr1.o(.text.TMR1_EnableMasterMode) for [Anonymous Symbol]
+    apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_DisableMasterMode) refers to apm32f00x_tmr1.o(.text.TMR1_DisableMasterMode) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_Reset) refers to apm32f00x_tmr2.o(.text.TMR2_Reset) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ConfigTimerBase) refers to apm32f00x_tmr2.o(.text.TMR2_ConfigTimerBase) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ConfigOutputComare1) refers to apm32f00x_tmr2.o(.text.TMR2_ConfigOutputComare1) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ConfigOutputComare2) refers to apm32f00x_tmr2.o(.text.TMR2_ConfigOutputComare2) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ConfigOutputComare3) refers to apm32f00x_tmr2.o(.text.TMR2_ConfigOutputComare3) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ConfigOutputCompare) refers to apm32f00x_tmr2.o(.text.TMR2_ConfigOutputCompare) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_OCStructInit) refers to apm32f00x_tmr2.o(.text.TMR2_OCStructInit) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ConfigOutputCompareMode) refers to apm32f00x_tmr2.o(.text.TMR2_ConfigOutputCompareMode) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ConfigInputCapture1) refers to apm32f00x_tmr2.o(.text.TMR2_ConfigInputCapture1) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ConfigInputCapture2) refers to apm32f00x_tmr2.o(.text.TMR2_ConfigInputCapture2) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ConfigInputCapture3) refers to apm32f00x_tmr2.o(.text.TMR2_ConfigInputCapture3) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ConfigInputCapture) refers to apm32f00x_tmr2.o(.text.TMR2_ConfigInputCapture) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ICStructInit) refers to apm32f00x_tmr2.o(.text.TMR2_ICStructInit) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ConfigInputPWM) refers to apm32f00x_tmr2.o(.text.TMR2_ConfigInputPWM) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_Enable) refers to apm32f00x_tmr2.o(.text.TMR2_Enable) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_Disable) refers to apm32f00x_tmr2.o(.text.TMR2_Disable) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_EnableInterrupt) refers to apm32f00x_tmr2.o(.text.TMR2_EnableInterrupt) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_DisableInterrupt) refers to apm32f00x_tmr2.o(.text.TMR2_DisableInterrupt) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_SetDivider) refers to apm32f00x_tmr2.o(.text.TMR2_SetDivider) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ConfigInputTrigger) refers to apm32f00x_tmr2.o(.text.TMR2_ConfigInputTrigger) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_EnableAutoReloadBuffer) refers to apm32f00x_tmr2.o(.text.TMR2_EnableAutoReloadBuffer) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_DisableAutoReloadBuffer) refers to apm32f00x_tmr2.o(.text.TMR2_DisableAutoReloadBuffer) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_EnableOutputCompareBuffer) refers to apm32f00x_tmr2.o(.text.TMR2_EnableOutputCompareBuffer) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_DisableOutputCompareBuffer) refers to apm32f00x_tmr2.o(.text.TMR2_DisableOutputCompareBuffer) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_GenerateEvent) refers to apm32f00x_tmr2.o(.text.TMR2_GenerateEvent) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ConfigOutputComparePolarity) refers to apm32f00x_tmr2.o(.text.TMR2_ConfigOutputComparePolarity) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_EnableCompareCapture) refers to apm32f00x_tmr2.o(.text.TMR2_EnableCompareCapture) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_DisableCompareCapture) refers to apm32f00x_tmr2.o(.text.TMR2_DisableCompareCapture) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_SetCounter) refers to apm32f00x_tmr2.o(.text.TMR2_SetCounter) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ConfigUpdate) refers to apm32f00x_tmr2.o(.text.TMR2_ConfigUpdate) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_EnableSinglePulseMode) refers to apm32f00x_tmr2.o(.text.TMR2_EnableSinglePulseMode) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_DisableSinglePulseMode) refers to apm32f00x_tmr2.o(.text.TMR2_DisableSinglePulseMode) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_SetAutoReloadVaue) refers to apm32f00x_tmr2.o(.text.TMR2_SetAutoReloadVaue) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_SetCompareCapture) refers to apm32f00x_tmr2.o(.text.TMR2_SetCompareCapture) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ReadCapture1) refers to apm32f00x_tmr2.o(.text.TMR2_ReadCapture1) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ReadCapture2) refers to apm32f00x_tmr2.o(.text.TMR2_ReadCapture2) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ReadCapture3) refers to apm32f00x_tmr2.o(.text.TMR2_ReadCapture3) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ReadCompareCapture) refers to apm32f00x_tmr2.o(.text.TMR2_ReadCompareCapture) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_SetInputCaptureDivider) refers to apm32f00x_tmr2.o(.text.TMR2_SetInputCaptureDivider) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ReadCounter) refers to apm32f00x_tmr2.o(.text.TMR2_ReadCounter) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ReadDivider) refers to apm32f00x_tmr2.o(.text.TMR2_ReadDivider) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ReadStatusFlag) refers to apm32f00x_tmr2.o(.text.TMR2_ReadStatusFlag) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ClearStatusFlag) refers to apm32f00x_tmr2.o(.text.TMR2_ClearStatusFlag) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ReadIntFlag) refers to apm32f00x_tmr2.o(.text.TMR2_ReadIntFlag) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ClearIntFlag) refers to apm32f00x_tmr2.o(.text.TMR2_ClearIntFlag) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ConfigSlaveMode) refers to apm32f00x_tmr2.o(.text.TMR2_ConfigSlaveMode) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ConfigMasterMode) refers to apm32f00x_tmr2.o(.text.TMR2_ConfigMasterMode) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_EnableMasterMode) refers to apm32f00x_tmr2.o(.text.TMR2_EnableMasterMode) for [Anonymous Symbol]
+    apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_DisableMasterMode) refers to apm32f00x_tmr2.o(.text.TMR2_DisableMasterMode) for [Anonymous Symbol]
+    apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_Reset) refers to apm32f00x_tmr4.o(.text.TMR4_Reset) for [Anonymous Symbol]
+    apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_ConfigTimerBase) refers to apm32f00x_tmr4.o(.text.TMR4_ConfigTimerBase) for [Anonymous Symbol]
+    apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_Enable) refers to apm32f00x_tmr4.o(.text.TMR4_Enable) for [Anonymous Symbol]
+    apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_Disable) refers to apm32f00x_tmr4.o(.text.TMR4_Disable) for [Anonymous Symbol]
+    apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_EnableInterrupt) refers to apm32f00x_tmr4.o(.text.TMR4_EnableInterrupt) for [Anonymous Symbol]
+    apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_DisableInterrupt) refers to apm32f00x_tmr4.o(.text.TMR4_DisableInterrupt) for [Anonymous Symbol]
+    apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_SetDivider) refers to apm32f00x_tmr4.o(.text.TMR4_SetDivider) for [Anonymous Symbol]
+    apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_ConfigInputTrigger) refers to apm32f00x_tmr4.o(.text.TMR4_ConfigInputTrigger) for [Anonymous Symbol]
+    apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_EnableAutoReloadBuffer) refers to apm32f00x_tmr4.o(.text.TMR4_EnableAutoReloadBuffer) for [Anonymous Symbol]
+    apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_ConfigUpdate) refers to apm32f00x_tmr4.o(.text.TMR4_ConfigUpdate) for [Anonymous Symbol]
+    apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_EnableSinglePulseMode) refers to apm32f00x_tmr4.o(.text.TMR4_EnableSinglePulseMode) for [Anonymous Symbol]
+    apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_DisableSinglePulseMode) refers to apm32f00x_tmr4.o(.text.TMR4_DisableSinglePulseMode) for [Anonymous Symbol]
+    apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_DisableAutoReloadBuffer) refers to apm32f00x_tmr4.o(.text.TMR4_DisableAutoReloadBuffer) for [Anonymous Symbol]
+    apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_GenerateEvent) refers to apm32f00x_tmr4.o(.text.TMR4_GenerateEvent) for [Anonymous Symbol]
+    apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_SetCounter) refers to apm32f00x_tmr4.o(.text.TMR4_SetCounter) for [Anonymous Symbol]
+    apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_SetAutoReloadVaue) refers to apm32f00x_tmr4.o(.text.TMR4_SetAutoReloadVaue) for [Anonymous Symbol]
+    apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_ReadCounter) refers to apm32f00x_tmr4.o(.text.TMR4_ReadCounter) for [Anonymous Symbol]
+    apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_ReadDivider) refers to apm32f00x_tmr4.o(.text.TMR4_ReadDivider) for [Anonymous Symbol]
+    apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_ReadStatusFlag) refers to apm32f00x_tmr4.o(.text.TMR4_ReadStatusFlag) for [Anonymous Symbol]
+    apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_ClearStatusFlag) refers to apm32f00x_tmr4.o(.text.TMR4_ClearStatusFlag) for [Anonymous Symbol]
+    apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_ReadIntFlag) refers to apm32f00x_tmr4.o(.text.TMR4_ReadIntFlag) for [Anonymous Symbol]
+    apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_ClearIntFlag) refers to apm32f00x_tmr4.o(.text.TMR4_ClearIntFlag) for [Anonymous Symbol]
+    apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_ConfigSlaveMode) refers to apm32f00x_tmr4.o(.text.TMR4_ConfigSlaveMode) for [Anonymous Symbol]
+    apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_ConfigMasterMode) refers to apm32f00x_tmr4.o(.text.TMR4_ConfigMasterMode) for [Anonymous Symbol]
+    apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_EnableMasterMode) refers to apm32f00x_tmr4.o(.text.TMR4_EnableMasterMode) for [Anonymous Symbol]
+    apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_DisableMasterMode) refers to apm32f00x_tmr4.o(.text.TMR4_DisableMasterMode) for [Anonymous Symbol]
+    apm32f00x_usart.o(.ARM.exidx.text.USART_Reset) refers to apm32f00x_usart.o(.text.USART_Reset) for [Anonymous Symbol]
+    apm32f00x_usart.o(.text.USART_Config) refers to apm32f00x_rcm.o(.text.RCM_GetMasterClockFreq) for RCM_GetMasterClockFreq
+    apm32f00x_usart.o(.text.USART_Config) refers to uidiv_div0.o(.text) for __aeabi_uidiv
+    apm32f00x_usart.o(.ARM.exidx.text.USART_Config) refers to apm32f00x_usart.o(.text.USART_Config) for [Anonymous Symbol]
+    apm32f00x_usart.o(.ARM.exidx.text.USART_EnableInterrupt) refers to apm32f00x_usart.o(.text.USART_EnableInterrupt) for [Anonymous Symbol]
+    apm32f00x_usart.o(.ARM.exidx.text.USART_ConfigStructInit) refers to apm32f00x_usart.o(.text.USART_ConfigStructInit) for [Anonymous Symbol]
+    apm32f00x_usart.o(.ARM.exidx.text.USART_Enable) refers to apm32f00x_usart.o(.text.USART_Enable) for [Anonymous Symbol]
+    apm32f00x_usart.o(.ARM.exidx.text.USART_Disable) refers to apm32f00x_usart.o(.text.USART_Disable) for [Anonymous Symbol]
+    apm32f00x_usart.o(.ARM.exidx.text.USART_DisableInterrupt) refers to apm32f00x_usart.o(.text.USART_DisableInterrupt) for [Anonymous Symbol]
+    apm32f00x_usart.o(.ARM.exidx.text.USART_EnableHalfDuplex) refers to apm32f00x_usart.o(.text.USART_EnableHalfDuplex) for [Anonymous Symbol]
+    apm32f00x_usart.o(.ARM.exidx.text.USART_DisableHalfDuplex) refers to apm32f00x_usart.o(.text.USART_DisableHalfDuplex) for [Anonymous Symbol]
+    apm32f00x_usart.o(.ARM.exidx.text.USART_ConfigIrDA) refers to apm32f00x_usart.o(.text.USART_ConfigIrDA) for [Anonymous Symbol]
+    apm32f00x_usart.o(.ARM.exidx.text.USART_EnableIrDA) refers to apm32f00x_usart.o(.text.USART_EnableIrDA) for [Anonymous Symbol]
+    apm32f00x_usart.o(.ARM.exidx.text.USART_DisableIrDA) refers to apm32f00x_usart.o(.text.USART_DisableIrDA) for [Anonymous Symbol]
+    apm32f00x_usart.o(.ARM.exidx.text.USART_ConfigLINBreakDetectLength) refers to apm32f00x_usart.o(.text.USART_ConfigLINBreakDetectLength) for [Anonymous Symbol]
+    apm32f00x_usart.o(.ARM.exidx.text.USART_EnableLIN) refers to apm32f00x_usart.o(.text.USART_EnableLIN) for [Anonymous Symbol]
+    apm32f00x_usart.o(.ARM.exidx.text.USART_DisableLIN) refers to apm32f00x_usart.o(.text.USART_DisableLIN) for [Anonymous Symbol]
+    apm32f00x_usart.o(.ARM.exidx.text.USART_EnableSmartCard) refers to apm32f00x_usart.o(.text.USART_EnableSmartCard) for [Anonymous Symbol]
+    apm32f00x_usart.o(.ARM.exidx.text.USART_DisableSmartCard) refers to apm32f00x_usart.o(.text.USART_DisableSmartCard) for [Anonymous Symbol]
+    apm32f00x_usart.o(.ARM.exidx.text.USART_EnableSmartCardNACK) refers to apm32f00x_usart.o(.text.USART_EnableSmartCardNACK) for [Anonymous Symbol]
+    apm32f00x_usart.o(.ARM.exidx.text.USART_DisableSmartCardNACK) refers to apm32f00x_usart.o(.text.USART_DisableSmartCardNACK) for [Anonymous Symbol]
+    apm32f00x_usart.o(.ARM.exidx.text.USART_EnableMuteMode) refers to apm32f00x_usart.o(.text.USART_EnableMuteMode) for [Anonymous Symbol]
+    apm32f00x_usart.o(.ARM.exidx.text.USART_DisableMuteMode) refers to apm32f00x_usart.o(.text.USART_DisableMuteMode) for [Anonymous Symbol]
+    apm32f00x_usart.o(.ARM.exidx.text.USART_ConfigMuteModeWakeUp) refers to apm32f00x_usart.o(.text.USART_ConfigMuteModeWakeUp) for [Anonymous Symbol]
+    apm32f00x_usart.o(.ARM.exidx.text.USART_RxData8) refers to apm32f00x_usart.o(.text.USART_RxData8) for [Anonymous Symbol]
+    apm32f00x_usart.o(.ARM.exidx.text.USART_RxData9) refers to apm32f00x_usart.o(.text.USART_RxData9) for [Anonymous Symbol]
+    apm32f00x_usart.o(.ARM.exidx.text.USART_TxData8) refers to apm32f00x_usart.o(.text.USART_TxData8) for [Anonymous Symbol]
+    apm32f00x_usart.o(.ARM.exidx.text.USART_TxData9) refers to apm32f00x_usart.o(.text.USART_TxData9) for [Anonymous Symbol]
+    apm32f00x_usart.o(.ARM.exidx.text.USART_TxBreak) refers to apm32f00x_usart.o(.text.USART_TxBreak) for [Anonymous Symbol]
+    apm32f00x_usart.o(.ARM.exidx.text.USART_Address) refers to apm32f00x_usart.o(.text.USART_Address) for [Anonymous Symbol]
+    apm32f00x_usart.o(.ARM.exidx.text.USART_ConfigGuardTime) refers to apm32f00x_usart.o(.text.USART_ConfigGuardTime) for [Anonymous Symbol]
+    apm32f00x_usart.o(.ARM.exidx.text.USART_ConfigDivNumber) refers to apm32f00x_usart.o(.text.USART_ConfigDivNumber) for [Anonymous Symbol]
+    apm32f00x_usart.o(.ARM.exidx.text.USART_ConfigSyncClock) refers to apm32f00x_usart.o(.text.USART_ConfigSyncClock) for [Anonymous Symbol]
+    apm32f00x_usart.o(.ARM.exidx.text.USART_ConfigSyncClockStructInit) refers to apm32f00x_usart.o(.text.USART_ConfigSyncClockStructInit) for [Anonymous Symbol]
+    apm32f00x_usart.o(.ARM.exidx.text.USART_ReadStatusFlag) refers to apm32f00x_usart.o(.text.USART_ReadStatusFlag) for [Anonymous Symbol]
+    apm32f00x_usart.o(.ARM.exidx.text.USART_ClearStatusFlag) refers to apm32f00x_usart.o(.text.USART_ClearStatusFlag) for [Anonymous Symbol]
+    apm32f00x_usart.o(.ARM.exidx.text.USART_ReadIntFlag) refers to apm32f00x_usart.o(.text.USART_ReadIntFlag) for [Anonymous Symbol]
+    apm32f00x_usart.o(.ARM.exidx.text.USART_ClearIntFlag) refers to apm32f00x_usart.o(.text.USART_ClearIntFlag) for [Anonymous Symbol]
+    apm32f00x_wupt.o(.ARM.exidx.text.WUPT_Reset) refers to apm32f00x_wupt.o(.text.WUPT_Reset) for [Anonymous Symbol]
+    apm32f00x_wupt.o(.text.WUPT_Config) refers to apm32f00x_wupt.o(.rodata.g_timeBaseTab) for g_timeBaseTab
+    apm32f00x_wupt.o(.text.WUPT_Config) refers to apm32f00x_wupt.o(.rodata.g_dividerTab) for g_dividerTab
+    apm32f00x_wupt.o(.ARM.exidx.text.WUPT_Config) refers to apm32f00x_wupt.o(.text.WUPT_Config) for [Anonymous Symbol]
+    apm32f00x_wupt.o(.ARM.exidx.text.WUPT_Enable) refers to apm32f00x_wupt.o(.text.WUPT_Enable) for [Anonymous Symbol]
+    apm32f00x_wupt.o(.ARM.exidx.text.WUPT_Disable) refers to apm32f00x_wupt.o(.text.WUPT_Disable) for [Anonymous Symbol]
+    apm32f00x_wupt.o(.text.WUPT_CalibrationLIRC) refers to uidiv_div0.o(.text) for __aeabi_uidiv
+    apm32f00x_wupt.o(.ARM.exidx.text.WUPT_CalibrationLIRC) refers to apm32f00x_wupt.o(.text.WUPT_CalibrationLIRC) for [Anonymous Symbol]
+    apm32f00x_wupt.o(.ARM.exidx.text.WUPT_EnterIdleMode) refers to apm32f00x_wupt.o(.text.WUPT_EnterIdleMode) for [Anonymous Symbol]
+    apm32f00x_wupt.o(.ARM.exidx.text.WUPT_ReadIntFlag) refers to apm32f00x_wupt.o(.text.WUPT_ReadIntFlag) for [Anonymous Symbol]
+    apm32f00x_wupt.o(.ARM.exidx.text.WUPT_EnableLIRCMeasurement) refers to apm32f00x_wupt.o(.text.WUPT_EnableLIRCMeasurement) for [Anonymous Symbol]
+    apm32f00x_wupt.o(.ARM.exidx.text.WUPT_DisableLIRCMeasurement) refers to apm32f00x_wupt.o(.text.WUPT_DisableLIRCMeasurement) for [Anonymous Symbol]
+    apm32f00x_wwdt.o(.ARM.exidx.text.WWDT_Config) refers to apm32f00x_wwdt.o(.text.WWDT_Config) for [Anonymous Symbol]
+    apm32f00x_wwdt.o(.ARM.exidx.text.WWDT_SetCounter) refers to apm32f00x_wwdt.o(.text.WWDT_SetCounter) for [Anonymous Symbol]
+    apm32f00x_wwdt.o(.ARM.exidx.text.WWDT_ReadCounter) refers to apm32f00x_wwdt.o(.text.WWDT_ReadCounter) for [Anonymous Symbol]
+    apm32f00x_wwdt.o(.ARM.exidx.text.WWDT_SoftwareReset) refers to apm32f00x_wwdt.o(.text.WWDT_SoftwareReset) for [Anonymous Symbol]
+    apm32f00x_wwdt.o(.ARM.exidx.text.WWDT_SetWidowData) refers to apm32f00x_wwdt.o(.text.WWDT_SetWidowData) for [Anonymous Symbol]
+    board.o(.text.Board_LedInit) refers to apm32f00x_gpio.o(.text.GPIO_Config) for GPIO_Config
+    board.o(.text.Board_LedInit) refers to board.o(.rodata.g_ledGPIO) for g_ledGPIO
+    board.o(.ARM.exidx.text.Board_LedInit) refers to board.o(.text.Board_LedInit) for [Anonymous Symbol]
+    board.o(.text.Board_LedOn) refers to apm32f00x_gpio.o(.text.GPIO_ClearBit) for GPIO_ClearBit
+    board.o(.text.Board_LedOn) refers to board.o(.rodata.g_ledGPIO) for g_ledGPIO
+    board.o(.ARM.exidx.text.Board_LedOn) refers to board.o(.text.Board_LedOn) for [Anonymous Symbol]
+    board.o(.text.Board_LedOff) refers to apm32f00x_gpio.o(.text.GPIO_SetBit) for GPIO_SetBit
+    board.o(.text.Board_LedOff) refers to board.o(.rodata.g_ledGPIO) for g_ledGPIO
+    board.o(.ARM.exidx.text.Board_LedOff) refers to board.o(.text.Board_LedOff) for [Anonymous Symbol]
+    board.o(.text.Board_LedToggle) refers to apm32f00x_gpio.o(.text.GPIO_Toggle) for GPIO_Toggle
+    board.o(.text.Board_LedToggle) refers to board.o(.rodata.g_ledGPIO) for g_ledGPIO
+    board.o(.ARM.exidx.text.Board_LedToggle) refers to board.o(.text.Board_LedToggle) for [Anonymous Symbol]
+    board.o(.text.Board_KeyInit) refers to apm32f00x_eint.o(.text.EINT_Config) for EINT_Config
+    board.o(.text.Board_KeyInit) refers to apm32f00x_gpio.o(.text.GPIO_Config) for GPIO_Config
+    board.o(.ARM.exidx.text.Board_KeyInit) refers to board.o(.text.Board_KeyInit) for [Anonymous Symbol]
+    board.o(.text.Board_ReadKeyState) refers to apm32f00x_gpio.o(.text.GPIO_ReadInputBit) for GPIO_ReadInputBit
+    board.o(.ARM.exidx.text.Board_ReadKeyState) refers to board.o(.text.Board_ReadKeyState) for [Anonymous Symbol]
+    usart_app.o(.text.Serial_begin) refers to apm32f00x_usart.o(.text.USART_Config) for USART_Config
+    usart_app.o(.text.Serial_begin) refers to apm32f00x_usart.o(.text.USART_Enable) for USART_Enable
+    usart_app.o(.ARM.exidx.text.Serial_begin) refers to usart_app.o(.text.Serial_begin) for [Anonymous Symbol]
+    usart_app.o(.text.SerialPrint_NumString) refers to apm32f00x_usart.o(.text.USART_TxData8) for USART_TxData8
+    usart_app.o(.text.SerialPrint_NumString) refers to apm32f00x_usart.o(.text.USART_ReadStatusFlag) for USART_ReadStatusFlag
+    usart_app.o(.text.SerialPrint_NumString) refers to uidiv_div0.o(.text) for __aeabi_uidiv
+    usart_app.o(.ARM.exidx.text.SerialPrint_NumString) refers to usart_app.o(.text.SerialPrint_NumString) for [Anonymous Symbol]
+    usart_app.o(.text.Serial_print_string) refers to apm32f00x_usart.o(.text.USART_TxData8) for USART_TxData8
+    usart_app.o(.text.Serial_print_string) refers to apm32f00x_usart.o(.text.USART_ReadStatusFlag) for USART_ReadStatusFlag
+    usart_app.o(.ARM.exidx.text.Serial_print_string) refers to usart_app.o(.text.Serial_print_string) for [Anonymous Symbol]
+    usart_app.o(.text.Serial_print_char) refers to apm32f00x_usart.o(.text.USART_TxData8) for USART_TxData8
+    usart_app.o(.text.Serial_print_char) refers to apm32f00x_usart.o(.text.USART_ReadStatusFlag) for USART_ReadStatusFlag
+    usart_app.o(.ARM.exidx.text.Serial_print_char) refers to usart_app.o(.text.Serial_print_char) for [Anonymous Symbol]
+    usart_app.o(.text.Serial_print_int) refers to uidiv_div0.o(.text) for __aeabi_uidiv
+    usart_app.o(.text.Serial_print_int) refers to apm32f00x_usart.o(.text.USART_TxData8) for USART_TxData8
+    usart_app.o(.text.Serial_print_int) refers to apm32f00x_usart.o(.text.USART_ReadStatusFlag) for USART_ReadStatusFlag
+    usart_app.o(.ARM.exidx.text.Serial_print_int) refers to usart_app.o(.text.Serial_print_int) for [Anonymous Symbol]
+    usart_app.o(.text.Serial_newline) refers to apm32f00x_usart.o(.text.USART_TxData8) for USART_TxData8
+    usart_app.o(.text.Serial_newline) refers to apm32f00x_usart.o(.text.USART_ReadStatusFlag) for USART_ReadStatusFlag
+    usart_app.o(.ARM.exidx.text.Serial_newline) refers to usart_app.o(.text.Serial_newline) for [Anonymous Symbol]
+    main.o(.text.main) refers to usart_app.o(.text.Serial_begin) for Serial_begin
+    main.o(.text.main) refers to board.o(.text.Board_LedInit) for Board_LedInit
+    main.o(.text.main) refers to board.o(.text.Board_LedOff) for Board_LedOff
+    main.o(.text.main) refers to apm32f00x_gpio.o(.text.GPIO_Config) for GPIO_Config
+    main.o(.text.main) refers to apm32f00x_adc.o(.text.ADC_SetMode) for ADC_SetMode
+    main.o(.text.main) refers to apm32f00x_adc.o(.text.ADC_ConfigStructInit) for ADC_ConfigStructInit
+    main.o(.text.main) refers to apm32f00x_adc.o(.text.ADC_Config) for ADC_Config
+    main.o(.text.main) refers to main.o(.text.ADCCalibration) for ADCCalibration
+    main.o(.text.main) refers to apm32f00x_adc.o(.text.ADC_Enable) for ADC_Enable
+    main.o(.text.main) refers to apm32f00x_adc.o(.text.ADC_StartConversion) for ADC_StartConversion
+    main.o(.text.main) refers to main.o(.text.ADCMeasure) for ADCMeasure
+    main.o(.ARM.exidx.text.main) refers to main.o(.text.main) for [Anonymous Symbol]
+    main.o(.text.LedInit) refers to board.o(.text.Board_LedInit) for Board_LedInit
+    main.o(.text.LedInit) refers to board.o(.text.Board_LedOff) for Board_LedOff
+    main.o(.ARM.exidx.text.LedInit) refers to main.o(.text.LedInit) for [Anonymous Symbol]
+    main.o(.text.ADCInit) refers to apm32f00x_gpio.o(.text.GPIO_Config) for GPIO_Config
+    main.o(.text.ADCInit) refers to apm32f00x_adc.o(.text.ADC_SetMode) for ADC_SetMode
+    main.o(.text.ADCInit) refers to apm32f00x_adc.o(.text.ADC_ConfigStructInit) for ADC_ConfigStructInit
+    main.o(.text.ADCInit) refers to apm32f00x_adc.o(.text.ADC_Config) for ADC_Config
+    main.o(.text.ADCInit) refers to main.o(.text.ADCCalibration) for ADCCalibration
+    main.o(.text.ADCInit) refers to apm32f00x_adc.o(.text.ADC_Enable) for ADC_Enable
+    main.o(.text.ADCInit) refers to apm32f00x_adc.o(.text.ADC_StartConversion) for ADC_StartConversion
+    main.o(.ARM.exidx.text.ADCInit) refers to main.o(.text.ADCInit) for [Anonymous Symbol]
+    main.o(.text.ADCMeasure) refers to board.o(.text.Board_LedOn) for Board_LedOn
+    main.o(.text.ADCMeasure) refers to board.o(.text.Board_LedOff) for Board_LedOff
+    main.o(.text.ADCMeasure) refers to apm32f00x_adc.o(.text.ADC_ReadStatusFlag) for ADC_ReadStatusFlag
+    main.o(.text.ADCMeasure) refers to apm32f00x_adc.o(.text.ADC_ClearStatusFlag) for ADC_ClearStatusFlag
+    main.o(.text.ADCMeasure) refers to apm32f00x_adc.o(.text.ADC_ReadData) for ADC_ReadData
+    main.o(.text.ADCMeasure) refers to usart_app.o(.text.SerialPrint_NumString) for SerialPrint_NumString
+    main.o(.text.ADCMeasure) refers to uidiv_div0.o(.text) for __aeabi_uidiv
+    main.o(.ARM.exidx.text.ADCMeasure) refers to main.o(.text.ADCMeasure) for [Anonymous Symbol]
+    main.o(.text.ADCCalibration) refers to apm32f00x_adc.o(.text.ADC_SetOffset) for ADC_SetOffset
+    main.o(.text.ADCCalibration) refers to apm32f00x_adc.o(.text.ADC_EnableCompensation) for ADC_EnableCompensation
+    main.o(.text.ADCCalibration) refers to apm32f00x_adc.o(.text.ADC_ClearStatusFlag) for ADC_ClearStatusFlag
+    main.o(.text.ADCCalibration) refers to apm32f00x_adc.o(.text.ADC_Enable) for ADC_Enable
+    main.o(.text.ADCCalibration) refers to apm32f00x_adc.o(.text.ADC_StartConversion) for ADC_StartConversion
+    main.o(.text.ADCCalibration) refers to apm32f00x_adc.o(.text.ADC_ReadStatusFlag) for ADC_ReadStatusFlag
+    main.o(.text.ADCCalibration) refers to apm32f00x_adc.o(.text.ADC_Disable) for ADC_Disable
+    main.o(.text.ADCCalibration) refers to apm32f00x_adc.o(.text.ADC_ReadData) for ADC_ReadData
+    main.o(.text.ADCCalibration) refers to apm32f00x_adc.o(.text.ADC_DisableCompensation) for ADC_DisableCompensation
+    main.o(.ARM.exidx.text.ADCCalibration) refers to main.o(.text.ADCCalibration) for [Anonymous Symbol]
+    main.o(.text.ADC_GPIO_Init) refers to apm32f00x_gpio.o(.text.GPIO_Config) for GPIO_Config
+    main.o(.ARM.exidx.text.ADC_GPIO_Init) refers to main.o(.text.ADC_GPIO_Init) for [Anonymous Symbol]
+    apm32f00x_int.o(.ARM.exidx.text.NMI_Handler) refers to apm32f00x_int.o(.text.NMI_Handler) for [Anonymous Symbol]
+    apm32f00x_int.o(.ARM.exidx.text.HardFault_Handler) refers to apm32f00x_int.o(.text.HardFault_Handler) for [Anonymous Symbol]
+    apm32f00x_int.o(.ARM.exidx.text.SVC_Handler) refers to apm32f00x_int.o(.text.SVC_Handler) for [Anonymous Symbol]
+    apm32f00x_int.o(.ARM.exidx.text.PendSV_Handler) refers to apm32f00x_int.o(.text.PendSV_Handler) for [Anonymous Symbol]
+    apm32f00x_int.o(.ARM.exidx.text.SysTick_Handler) refers to apm32f00x_int.o(.text.SysTick_Handler) for [Anonymous Symbol]
+    apm32f00x_int.o(.ARM.exidx.text.ADC_IRQHandler) refers to apm32f00x_int.o(.text.ADC_IRQHandler) for [Anonymous Symbol]
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry8b.o(.ARM.Collect$$$$0000000A) for _main_cpp_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry9a.o(.ARM.Collect$$$$0000000B) for _main_init
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry5.o(.ARM.Collect$$$$00000004) for _main_scatterload
+    entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry2.o(.ARM.Collect$$$$00000001) for _main_stk
+    entry2.o(.ARM.Collect$$$$00000001) refers to entry2.o(.ARM.Collect$$$$00002712) for __lit__00000000
+    entry2.o(.ARM.Collect$$$$00002712) refers to startup_apm32f0xx.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to startup_apm32f0xx.o(STACK) for __initial_sp
+    entry2.o(__vectab_stack_and_reset_area) refers to entry.o(.ARM.Collect$$$$00000000) for __main
+    entry5.o(.ARM.Collect$$$$00000004) refers to init.o(.text) for __scatterload
+    entry9a.o(.ARM.Collect$$$$0000000B) refers to main.o(.text.main) for main
+    entry9b.o(.ARM.Collect$$$$0000000C) refers to main.o(.text.main) for main
+    idiv_div0.o(.text) refers to uidiv_div0.o(.text) for __aeabi_uidivmod
+    init.o(.text) refers to entry5.o(.ARM.Collect$$$$00000004) for __main_after_scatterload
+
+
+==============================================================================
+
+Removing Unused input sections from the image.
+
+    Removing system_apm32f00x.o(.text), (0 bytes).
+    Removing system_apm32f00x.o(.ARM.exidx.text.SystemInit), (8 bytes).
+    Removing startup_apm32f0xx.o(HEAP), (512 bytes).
+    Removing apm32f00x_adc.o(.text), (0 bytes).
+    Removing apm32f00x_adc.o(.text.ADC_Reset), (44 bytes).
+    Removing apm32f00x_adc.o(.ARM.exidx.text.ADC_Reset), (8 bytes).
+    Removing apm32f00x_adc.o(.ARM.exidx.text.ADC_Config), (8 bytes).
+    Removing apm32f00x_adc.o(.text.ADC_SetChannel), (60 bytes).
+    Removing apm32f00x_adc.o(.ARM.exidx.text.ADC_SetChannel), (8 bytes).
+    Removing apm32f00x_adc.o(.ARM.exidx.text.ADC_ConfigStructInit), (8 bytes).
+    Removing apm32f00x_adc.o(.text.ADC_EnableDelay), (16 bytes).
+    Removing apm32f00x_adc.o(.ARM.exidx.text.ADC_EnableDelay), (8 bytes).
+    Removing apm32f00x_adc.o(.text.ADC_DisableDelay), (16 bytes).
+    Removing apm32f00x_adc.o(.ARM.exidx.text.ADC_DisableDelay), (8 bytes).
+    Removing apm32f00x_adc.o(.ARM.exidx.text.ADC_Enable), (8 bytes).
+    Removing apm32f00x_adc.o(.ARM.exidx.text.ADC_Disable), (8 bytes).
+    Removing apm32f00x_adc.o(.ARM.exidx.text.ADC_SetMode), (8 bytes).
+    Removing apm32f00x_adc.o(.text.ADC_ConfigScanMode), (24 bytes).
+    Removing apm32f00x_adc.o(.ARM.exidx.text.ADC_ConfigScanMode), (8 bytes).
+    Removing apm32f00x_adc.o(.text.ADC_EnableDataBuf), (16 bytes).
+    Removing apm32f00x_adc.o(.ARM.exidx.text.ADC_EnableDataBuf), (8 bytes).
+    Removing apm32f00x_adc.o(.text.ADC_DisableDataBuf), (16 bytes).
+    Removing apm32f00x_adc.o(.ARM.exidx.text.ADC_DisableDataBuf), (8 bytes).
+    Removing apm32f00x_adc.o(.text.ADC_EnableInterrupt), (16 bytes).
+    Removing apm32f00x_adc.o(.ARM.exidx.text.ADC_EnableInterrupt), (8 bytes).
+    Removing apm32f00x_adc.o(.text.ADC_DisableInterrupt), (16 bytes).
+    Removing apm32f00x_adc.o(.ARM.exidx.text.ADC_DisableInterrupt), (8 bytes).
+    Removing apm32f00x_adc.o(.text.ADC_ConfigDivider), (24 bytes).
+    Removing apm32f00x_adc.o(.ARM.exidx.text.ADC_ConfigDivider), (8 bytes).
+    Removing apm32f00x_adc.o(.text.ADC_EnableSchmittTrigger), (32 bytes).
+    Removing apm32f00x_adc.o(.ARM.exidx.text.ADC_EnableSchmittTrigger), (8 bytes).
+    Removing apm32f00x_adc.o(.text.ADC_DisableSchmittTrigger), (24 bytes).
+    Removing apm32f00x_adc.o(.ARM.exidx.text.ADC_DisableSchmittTrigger), (8 bytes).
+    Removing apm32f00x_adc.o(.text.ADC_ConfigConversionMode), (24 bytes).
+    Removing apm32f00x_adc.o(.ARM.exidx.text.ADC_ConfigConversionMode), (8 bytes).
+    Removing apm32f00x_adc.o(.text.ADC_ConfigDataAlign), (24 bytes).
+    Removing apm32f00x_adc.o(.ARM.exidx.text.ADC_ConfigDataAlign), (8 bytes).
+    Removing apm32f00x_adc.o(.text.ADC_SetDiffInputChannel), (20 bytes).
+    Removing apm32f00x_adc.o(.ARM.exidx.text.ADC_SetDiffInputChannel), (8 bytes).
+    Removing apm32f00x_adc.o(.text.ADC_ConfigExternalTrigger), (36 bytes).
+    Removing apm32f00x_adc.o(.ARM.exidx.text.ADC_ConfigExternalTrigger), (8 bytes).
+    Removing apm32f00x_adc.o(.ARM.exidx.text.ADC_StartConversion), (8 bytes).
+    Removing apm32f00x_adc.o(.ARM.exidx.text.ADC_ReadData), (8 bytes).
+    Removing apm32f00x_adc.o(.text.ADC_EnableAnalogWatchdog), (24 bytes).
+    Removing apm32f00x_adc.o(.ARM.exidx.text.ADC_EnableAnalogWatchdog), (8 bytes).
+    Removing apm32f00x_adc.o(.text.ADC_DisableAnalogWatchdog), (32 bytes).
+    Removing apm32f00x_adc.o(.ARM.exidx.text.ADC_DisableAnalogWatchdog), (8 bytes).
+    Removing apm32f00x_adc.o(.text.ADC_SetAWDThresholdHigh), (20 bytes).
+    Removing apm32f00x_adc.o(.ARM.exidx.text.ADC_SetAWDThresholdHigh), (8 bytes).
+    Removing apm32f00x_adc.o(.text.ADC_SetAWDThresholdLow), (20 bytes).
+    Removing apm32f00x_adc.o(.ARM.exidx.text.ADC_SetAWDThresholdLow), (8 bytes).
+    Removing apm32f00x_adc.o(.text.ADC_ReadBufferData), (72 bytes).
+    Removing apm32f00x_adc.o(.ARM.exidx.text.ADC_ReadBufferData), (8 bytes).
+    Removing apm32f00x_adc.o(.text.ADC_ReadAnalogWatchdogStatus), (32 bytes).
+    Removing apm32f00x_adc.o(.ARM.exidx.text.ADC_ReadAnalogWatchdogStatus), (8 bytes).
+    Removing apm32f00x_adc.o(.ARM.exidx.text.ADC_ReadStatusFlag), (8 bytes).
+    Removing apm32f00x_adc.o(.ARM.exidx.text.ADC_ClearStatusFlag), (8 bytes).
+    Removing apm32f00x_adc.o(.text.ADC_ReadIntFlag), (20 bytes).
+    Removing apm32f00x_adc.o(.ARM.exidx.text.ADC_ReadIntFlag), (8 bytes).
+    Removing apm32f00x_adc.o(.text.ADC_ClearIntFlag), (24 bytes).
+    Removing apm32f00x_adc.o(.ARM.exidx.text.ADC_ClearIntFlag), (8 bytes).
+    Removing apm32f00x_adc.o(.ARM.exidx.text.ADC_EnableCompensation), (8 bytes).
+    Removing apm32f00x_adc.o(.ARM.exidx.text.ADC_DisableCompensation), (8 bytes).
+    Removing apm32f00x_adc.o(.text.ADC_ReadOffset), (28 bytes).
+    Removing apm32f00x_adc.o(.ARM.exidx.text.ADC_ReadOffset), (8 bytes).
+    Removing apm32f00x_adc.o(.ARM.exidx.text.ADC_SetOffset), (8 bytes).
+    Removing apm32f00x_eint.o(.text), (0 bytes).
+    Removing apm32f00x_eint.o(.text.EINT_Reset), (16 bytes).
+    Removing apm32f00x_eint.o(.ARM.exidx.text.EINT_Reset), (8 bytes).
+    Removing apm32f00x_eint.o(.text.EINT_Config), (124 bytes).
+    Removing apm32f00x_eint.o(.ARM.exidx.text.EINT_Config), (8 bytes).
+    Removing apm32f00x_eint.o(.text.EINT_ClearIntFlag), (16 bytes).
+    Removing apm32f00x_eint.o(.ARM.exidx.text.EINT_ClearIntFlag), (8 bytes).
+    Removing apm32f00x_gpio.o(.text), (0 bytes).
+    Removing apm32f00x_gpio.o(.text.GPIO_Reset), (14 bytes).
+    Removing apm32f00x_gpio.o(.ARM.exidx.text.GPIO_Reset), (8 bytes).
+    Removing apm32f00x_gpio.o(.ARM.exidx.text.GPIO_Config), (8 bytes).
+    Removing apm32f00x_gpio.o(.text.GPIO_ConfigStructInit), (14 bytes).
+    Removing apm32f00x_gpio.o(.ARM.exidx.text.GPIO_ConfigStructInit), (8 bytes).
+    Removing apm32f00x_gpio.o(.text.GPIO_WriteOutputPort), (4 bytes).
+    Removing apm32f00x_gpio.o(.ARM.exidx.text.GPIO_WriteOutputPort), (8 bytes).
+    Removing apm32f00x_gpio.o(.ARM.exidx.text.GPIO_SetBit), (8 bytes).
+    Removing apm32f00x_gpio.o(.ARM.exidx.text.GPIO_ClearBit), (8 bytes).
+    Removing apm32f00x_gpio.o(.text.GPIO_ReadOutputPort), (6 bytes).
+    Removing apm32f00x_gpio.o(.ARM.exidx.text.GPIO_ReadOutputPort), (8 bytes).
+    Removing apm32f00x_gpio.o(.text.GPIO_ReadInputPort), (6 bytes).
+    Removing apm32f00x_gpio.o(.ARM.exidx.text.GPIO_ReadInputPort), (8 bytes).
+    Removing apm32f00x_gpio.o(.text.GPIO_ReadInputBit), (10 bytes).
+    Removing apm32f00x_gpio.o(.ARM.exidx.text.GPIO_ReadInputBit), (8 bytes).
+    Removing apm32f00x_gpio.o(.text.GPIO_Toggle), (8 bytes).
+    Removing apm32f00x_gpio.o(.ARM.exidx.text.GPIO_Toggle), (8 bytes).
+    Removing apm32f00x_gpio.o(.text.GPIO_EnableSWD), (12 bytes).
+    Removing apm32f00x_gpio.o(.ARM.exidx.text.GPIO_EnableSWD), (8 bytes).
+    Removing apm32f00x_gpio.o(.text.GPIO_DisableSWD), (12 bytes).
+    Removing apm32f00x_gpio.o(.ARM.exidx.text.GPIO_DisableSWD), (8 bytes).
+    Removing apm32f00x_misc.o(.text), (0 bytes).
+    Removing apm32f00x_misc.o(.text.NVIC_EnableIRQRequest), (80 bytes).
+    Removing apm32f00x_misc.o(.ARM.exidx.text.NVIC_EnableIRQRequest), (8 bytes).
+    Removing apm32f00x_misc.o(.text.NVIC_DisableIRQRequest), (32 bytes).
+    Removing apm32f00x_misc.o(.ARM.exidx.text.NVIC_DisableIRQRequest), (8 bytes).
+    Removing apm32f00x_misc.o(.text.PMU_EnterWaitMode), (20 bytes).
+    Removing apm32f00x_misc.o(.ARM.exidx.text.PMU_EnterWaitMode), (8 bytes).
+    Removing apm32f00x_misc.o(.text.PMU_EnterHaltModeWFI), (24 bytes).
+    Removing apm32f00x_misc.o(.ARM.exidx.text.PMU_EnterHaltModeWFI), (8 bytes).
+    Removing apm32f00x_misc.o(.text.PMU_EnterHaltModeWFE), (24 bytes).
+    Removing apm32f00x_misc.o(.ARM.exidx.text.PMU_EnterHaltModeWFE), (8 bytes).
+    Removing apm32f00x_buzzer.o(.text), (0 bytes).
+    Removing apm32f00x_buzzer.o(.text.BUZZER_Reset), (12 bytes).
+    Removing apm32f00x_buzzer.o(.ARM.exidx.text.BUZZER_Reset), (8 bytes).
+    Removing apm32f00x_buzzer.o(.text.BUZZER_Config), (44 bytes).
+    Removing apm32f00x_buzzer.o(.ARM.exidx.text.BUZZER_Config), (8 bytes).
+    Removing apm32f00x_buzzer.o(.text.BUZZER_Enable), (16 bytes).
+    Removing apm32f00x_buzzer.o(.ARM.exidx.text.BUZZER_Enable), (8 bytes).
+    Removing apm32f00x_buzzer.o(.text.BUZZER_Disable), (16 bytes).
+    Removing apm32f00x_buzzer.o(.ARM.exidx.text.BUZZER_Disable), (8 bytes).
+    Removing apm32f00x_buzzer.o(.text.BUZZER_CalibrationLIRC), (72 bytes).
+    Removing apm32f00x_buzzer.o(.ARM.exidx.text.BUZZER_CalibrationLIRC), (8 bytes).
+    Removing apm32f00x_fmc.o(.text), (0 bytes).
+    Removing apm32f00x_fmc.o(.text.FMC_SetLatency), (20 bytes).
+    Removing apm32f00x_fmc.o(.ARM.exidx.text.FMC_SetLatency), (8 bytes).
+    Removing apm32f00x_fmc.o(.text.FMC_EnableHlafCycleAccess), (16 bytes).
+    Removing apm32f00x_fmc.o(.ARM.exidx.text.FMC_EnableHlafCycleAccess), (8 bytes).
+    Removing apm32f00x_fmc.o(.text.FMC_DisableHlafCycleAccess), (16 bytes).
+    Removing apm32f00x_fmc.o(.ARM.exidx.text.FMC_DisableHlafCycleAccess), (8 bytes).
+    Removing apm32f00x_fmc.o(.text.FMC_EnablePrefetchBuffer), (16 bytes).
+    Removing apm32f00x_fmc.o(.ARM.exidx.text.FMC_EnablePrefetchBuffer), (8 bytes).
+    Removing apm32f00x_fmc.o(.text.FMC_DisablePrefetchBuffer), (16 bytes).
+    Removing apm32f00x_fmc.o(.ARM.exidx.text.FMC_DisablePrefetchBuffer), (8 bytes).
+    Removing apm32f00x_fmc.o(.text.FMC_Unlock), (24 bytes).
+    Removing apm32f00x_fmc.o(.ARM.exidx.text.FMC_Unlock), (8 bytes).
+    Removing apm32f00x_fmc.o(.text.FMC_Lock), (16 bytes).
+    Removing apm32f00x_fmc.o(.ARM.exidx.text.FMC_Lock), (8 bytes).
+    Removing apm32f00x_fmc.o(.text.FMC_ReadState), (32 bytes).
+    Removing apm32f00x_fmc.o(.ARM.exidx.text.FMC_ReadState), (8 bytes).
+    Removing apm32f00x_fmc.o(.text.FMC_WaitForReady), (60 bytes).
+    Removing apm32f00x_fmc.o(.ARM.exidx.text.FMC_WaitForReady), (8 bytes).
+    Removing apm32f00x_fmc.o(.text.FMC_ErasePage), (148 bytes).
+    Removing apm32f00x_fmc.o(.ARM.exidx.text.FMC_ErasePage), (8 bytes).
+    Removing apm32f00x_fmc.o(.text.FMC_EraseAllPages), (148 bytes).
+    Removing apm32f00x_fmc.o(.ARM.exidx.text.FMC_EraseAllPages), (8 bytes).
+    Removing apm32f00x_fmc.o(.text.FMC_EraseOptionByte), (272 bytes).
+    Removing apm32f00x_fmc.o(.ARM.exidx.text.FMC_EraseOptionByte), (8 bytes).
+    Removing apm32f00x_fmc.o(.text.FMC_ProgramWord), (212 bytes).
+    Removing apm32f00x_fmc.o(.ARM.exidx.text.FMC_ProgramWord), (8 bytes).
+    Removing apm32f00x_fmc.o(.text.FMC_ProgramHalfWord), (144 bytes).
+    Removing apm32f00x_fmc.o(.ARM.exidx.text.FMC_ProgramHalfWord), (8 bytes).
+    Removing apm32f00x_fmc.o(.text.FMC_ProgramOptionByte), (168 bytes).
+    Removing apm32f00x_fmc.o(.ARM.exidx.text.FMC_ProgramOptionByte), (8 bytes).
+    Removing apm32f00x_fmc.o(.text.FMC_EnableWriteProtection), (204 bytes).
+    Removing apm32f00x_fmc.o(.ARM.exidx.text.FMC_EnableWriteProtection), (8 bytes).
+    Removing apm32f00x_fmc.o(.text.FMC_ConfigReadOutProtection), (268 bytes).
+    Removing apm32f00x_fmc.o(.ARM.exidx.text.FMC_ConfigReadOutProtection), (8 bytes).
+    Removing apm32f00x_fmc.o(.text.FMC_ConfigOptionByteUser), (196 bytes).
+    Removing apm32f00x_fmc.o(.ARM.exidx.text.FMC_ConfigOptionByteUser), (8 bytes).
+    Removing apm32f00x_fmc.o(.text.FMC_ConfigOptionByteAFR), (192 bytes).
+    Removing apm32f00x_fmc.o(.ARM.exidx.text.FMC_ConfigOptionByteAFR), (8 bytes).
+    Removing apm32f00x_fmc.o(.text.FMC_ConfigOptionByteClk), (192 bytes).
+    Removing apm32f00x_fmc.o(.ARM.exidx.text.FMC_ConfigOptionByteClk), (8 bytes).
+    Removing apm32f00x_fmc.o(.text.FMC_ConfigOptionByteHXTCNT), (176 bytes).
+    Removing apm32f00x_fmc.o(.ARM.exidx.text.FMC_ConfigOptionByteHXTCNT), (8 bytes).
+    Removing apm32f00x_fmc.o(.text.FMC_ReadOptionByteUser), (12 bytes).
+    Removing apm32f00x_fmc.o(.ARM.exidx.text.FMC_ReadOptionByteUser), (8 bytes).
+    Removing apm32f00x_fmc.o(.text.FMC_ReadOptionByteWriteProtection), (12 bytes).
+    Removing apm32f00x_fmc.o(.ARM.exidx.text.FMC_ReadOptionByteWriteProtection), (8 bytes).
+    Removing apm32f00x_fmc.o(.text.FMC_ReadProtectionStatus), (16 bytes).
+    Removing apm32f00x_fmc.o(.ARM.exidx.text.FMC_ReadProtectionStatus), (8 bytes).
+    Removing apm32f00x_fmc.o(.text.FMC_ReadPrefetchBufferStatus), (16 bytes).
+    Removing apm32f00x_fmc.o(.ARM.exidx.text.FMC_ReadPrefetchBufferStatus), (8 bytes).
+    Removing apm32f00x_fmc.o(.text.FMC_EnableInterrupt), (16 bytes).
+    Removing apm32f00x_fmc.o(.ARM.exidx.text.FMC_EnableInterrupt), (8 bytes).
+    Removing apm32f00x_fmc.o(.text.FMC_DisableInterrupt), (16 bytes).
+    Removing apm32f00x_fmc.o(.ARM.exidx.text.FMC_DisableInterrupt), (8 bytes).
+    Removing apm32f00x_fmc.o(.text.FMC_ReadStatusFlag), (24 bytes).
+    Removing apm32f00x_fmc.o(.ARM.exidx.text.FMC_ReadStatusFlag), (8 bytes).
+    Removing apm32f00x_fmc.o(.text.FMC_ClearStatusFlag), (16 bytes).
+    Removing apm32f00x_fmc.o(.ARM.exidx.text.FMC_ClearStatusFlag), (8 bytes).
+    Removing apm32f00x_fmc.o(.text.FMC_EnablePowerDownHaltMode), (16 bytes).
+    Removing apm32f00x_fmc.o(.ARM.exidx.text.FMC_EnablePowerDownHaltMode), (8 bytes).
+    Removing apm32f00x_fmc.o(.text.FMC_DisablePowerDownHaltMode), (16 bytes).
+    Removing apm32f00x_fmc.o(.ARM.exidx.text.FMC_DisablePowerDownHaltMode), (8 bytes).
+    Removing apm32f00x_fmc.o(.text.FMC_EnablePowerDownActHaltMode), (16 bytes).
+    Removing apm32f00x_fmc.o(.ARM.exidx.text.FMC_EnablePowerDownActHaltMode), (8 bytes).
+    Removing apm32f00x_fmc.o(.text.FMC_DisablePowerDownActHaltMode), (16 bytes).
+    Removing apm32f00x_fmc.o(.ARM.exidx.text.FMC_DisablePowerDownActHaltMode), (8 bytes).
+    Removing apm32f00x_fmc.o(.text.FMC_SetPowerOnTime), (12 bytes).
+    Removing apm32f00x_fmc.o(.ARM.exidx.text.FMC_SetPowerOnTime), (8 bytes).
+    Removing apm32f00x_i2c.o(.text), (0 bytes).
+    Removing apm32f00x_i2c.o(.text.I2C_Reset), (32 bytes).
+    Removing apm32f00x_i2c.o(.ARM.exidx.text.I2C_Reset), (8 bytes).
+    Removing apm32f00x_i2c.o(.text.I2C_Config), (288 bytes).
+    Removing apm32f00x_i2c.o(.ARM.exidx.text.I2C_Config), (8 bytes).
+    Removing apm32f00x_i2c.o(.text.I2C_ConfigStructInit), (28 bytes).
+    Removing apm32f00x_i2c.o(.ARM.exidx.text.I2C_ConfigStructInit), (8 bytes).
+    Removing apm32f00x_i2c.o(.text.I2C_Enable), (16 bytes).
+    Removing apm32f00x_i2c.o(.ARM.exidx.text.I2C_Enable), (8 bytes).
+    Removing apm32f00x_i2c.o(.text.I2C_Disable), (16 bytes).
+    Removing apm32f00x_i2c.o(.ARM.exidx.text.I2C_Disable), (8 bytes).
+    Removing apm32f00x_i2c.o(.text.I2C_DisableBroadcastCall), (16 bytes).
+    Removing apm32f00x_i2c.o(.ARM.exidx.text.I2C_DisableBroadcastCall), (8 bytes).
+    Removing apm32f00x_i2c.o(.text.I2C_EnableBroadcastCall), (16 bytes).
+    Removing apm32f00x_i2c.o(.ARM.exidx.text.I2C_EnableBroadcastCall), (8 bytes).
+    Removing apm32f00x_i2c.o(.text.I2C_EnableGenerateStart), (16 bytes).
+    Removing apm32f00x_i2c.o(.ARM.exidx.text.I2C_EnableGenerateStart), (8 bytes).
+    Removing apm32f00x_i2c.o(.text.I2C_DisableGenerateStart), (16 bytes).
+    Removing apm32f00x_i2c.o(.ARM.exidx.text.I2C_DisableGenerateStart), (8 bytes).
+    Removing apm32f00x_i2c.o(.text.I2C_EnableGenerateStop), (16 bytes).
+    Removing apm32f00x_i2c.o(.ARM.exidx.text.I2C_EnableGenerateStop), (8 bytes).
+    Removing apm32f00x_i2c.o(.text.I2C_DisableGenerateStop), (16 bytes).
+    Removing apm32f00x_i2c.o(.ARM.exidx.text.I2C_DisableGenerateStop), (8 bytes).
+    Removing apm32f00x_i2c.o(.text.I2C_EnableSoftwareReset), (16 bytes).
+    Removing apm32f00x_i2c.o(.ARM.exidx.text.I2C_EnableSoftwareReset), (8 bytes).
+    Removing apm32f00x_i2c.o(.text.I2C_DisableSoftwareReset), (16 bytes).
+    Removing apm32f00x_i2c.o(.ARM.exidx.text.I2C_DisableSoftwareReset), (8 bytes).
+    Removing apm32f00x_i2c.o(.text.I2C_EnableStretchClock), (16 bytes).
+    Removing apm32f00x_i2c.o(.ARM.exidx.text.I2C_EnableStretchClock), (8 bytes).
+    Removing apm32f00x_i2c.o(.text.I2C_DisableStretchClock), (16 bytes).
+    Removing apm32f00x_i2c.o(.ARM.exidx.text.I2C_DisableStretchClock), (8 bytes).
+    Removing apm32f00x_i2c.o(.text.I2C_ConfigAcknowledge), (40 bytes).
+    Removing apm32f00x_i2c.o(.ARM.exidx.text.I2C_ConfigAcknowledge), (8 bytes).
+    Removing apm32f00x_i2c.o(.text.I2C_EnableInterrupt), (16 bytes).
+    Removing apm32f00x_i2c.o(.ARM.exidx.text.I2C_EnableInterrupt), (8 bytes).
+    Removing apm32f00x_i2c.o(.text.I2C_DisableInterrupt), (16 bytes).
+    Removing apm32f00x_i2c.o(.ARM.exidx.text.I2C_DisableInterrupt), (8 bytes).
+    Removing apm32f00x_i2c.o(.text.I2C_ConfigDutyCycle), (24 bytes).
+    Removing apm32f00x_i2c.o(.ARM.exidx.text.I2C_ConfigDutyCycle), (8 bytes).
+    Removing apm32f00x_i2c.o(.text.I2C_RxData), (12 bytes).
+    Removing apm32f00x_i2c.o(.ARM.exidx.text.I2C_RxData), (8 bytes).
+    Removing apm32f00x_i2c.o(.text.I2C_TxAddress7Bit), (16 bytes).
+    Removing apm32f00x_i2c.o(.ARM.exidx.text.I2C_TxAddress7Bit), (8 bytes).
+    Removing apm32f00x_i2c.o(.text.I2C_TxData), (12 bytes).
+    Removing apm32f00x_i2c.o(.ARM.exidx.text.I2C_TxData), (8 bytes).
+    Removing apm32f00x_i2c.o(.text.I2C_ReadStatusFlag), (72 bytes).
+    Removing apm32f00x_i2c.o(.ARM.exidx.text.I2C_ReadStatusFlag), (8 bytes).
+    Removing apm32f00x_i2c.o(.text.I2C_ClearStatusFlag), (32 bytes).
+    Removing apm32f00x_i2c.o(.ARM.exidx.text.I2C_ClearStatusFlag), (8 bytes).
+    Removing apm32f00x_i2c.o(.text.I2C_ReadIntFlag), (48 bytes).
+    Removing apm32f00x_i2c.o(.ARM.exidx.text.I2C_ReadIntFlag), (8 bytes).
+    Removing apm32f00x_i2c.o(.text.I2C_ClearIntFlag), (28 bytes).
+    Removing apm32f00x_i2c.o(.ARM.exidx.text.I2C_ClearIntFlag), (8 bytes).
+    Removing apm32f00x_iwdt.o(.text), (0 bytes).
+    Removing apm32f00x_iwdt.o(.text.IWDT_EnableWriteAccess), (12 bytes).
+    Removing apm32f00x_iwdt.o(.ARM.exidx.text.IWDT_EnableWriteAccess), (8 bytes).
+    Removing apm32f00x_iwdt.o(.text.IWDT_DisableWriteAccess), (12 bytes).
+    Removing apm32f00x_iwdt.o(.ARM.exidx.text.IWDT_DisableWriteAccess), (8 bytes).
+    Removing apm32f00x_iwdt.o(.text.IWDT_SetDivider), (12 bytes).
+    Removing apm32f00x_iwdt.o(.ARM.exidx.text.IWDT_SetDivider), (8 bytes).
+    Removing apm32f00x_iwdt.o(.text.IWDT_SetReloadCounter), (12 bytes).
+    Removing apm32f00x_iwdt.o(.ARM.exidx.text.IWDT_SetReloadCounter), (8 bytes).
+    Removing apm32f00x_iwdt.o(.text.IWDT_ReloadCounter), (12 bytes).
+    Removing apm32f00x_iwdt.o(.ARM.exidx.text.IWDT_ReloadCounter), (8 bytes).
+    Removing apm32f00x_iwdt.o(.text.IWDT_Enable), (12 bytes).
+    Removing apm32f00x_iwdt.o(.ARM.exidx.text.IWDT_Enable), (8 bytes).
+    Removing apm32f00x_rcm.o(.text), (0 bytes).
+    Removing apm32f00x_rcm.o(.text.RCM_Reset), (76 bytes).
+    Removing apm32f00x_rcm.o(.ARM.exidx.text.RCM_Reset), (8 bytes).
+    Removing apm32f00x_rcm.o(.text.RCM_EnableFastWakeup), (16 bytes).
+    Removing apm32f00x_rcm.o(.ARM.exidx.text.RCM_EnableFastWakeup), (8 bytes).
+    Removing apm32f00x_rcm.o(.text.RCM_DisableFastWakeup), (16 bytes).
+    Removing apm32f00x_rcm.o(.ARM.exidx.text.RCM_DisableFastWakeup), (8 bytes).
+    Removing apm32f00x_rcm.o(.text.RCM_EnableHXT), (16 bytes).
+    Removing apm32f00x_rcm.o(.ARM.exidx.text.RCM_EnableHXT), (8 bytes).
+    Removing apm32f00x_rcm.o(.text.RCM_DisableHXT), (16 bytes).
+    Removing apm32f00x_rcm.o(.ARM.exidx.text.RCM_DisableHXT), (8 bytes).
+    Removing apm32f00x_rcm.o(.text.RCM_EnableHIRC), (16 bytes).
+    Removing apm32f00x_rcm.o(.ARM.exidx.text.RCM_EnableHIRC), (8 bytes).
+    Removing apm32f00x_rcm.o(.text.RCM_DisableHIRC), (16 bytes).
+    Removing apm32f00x_rcm.o(.ARM.exidx.text.RCM_DisableHIRC), (8 bytes).
+    Removing apm32f00x_rcm.o(.text.RCM_EnableLIRC), (16 bytes).
+    Removing apm32f00x_rcm.o(.ARM.exidx.text.RCM_EnableLIRC), (8 bytes).
+    Removing apm32f00x_rcm.o(.text.RCM_DisableLIRC), (16 bytes).
+    Removing apm32f00x_rcm.o(.ARM.exidx.text.RCM_DisableLIRC), (8 bytes).
+    Removing apm32f00x_rcm.o(.text.RCM_EnableClockOutput), (16 bytes).
+    Removing apm32f00x_rcm.o(.ARM.exidx.text.RCM_EnableClockOutput), (8 bytes).
+    Removing apm32f00x_rcm.o(.text.RCM_DisableClockOutput), (16 bytes).
+    Removing apm32f00x_rcm.o(.ARM.exidx.text.RCM_DisableClockOutput), (8 bytes).
+    Removing apm32f00x_rcm.o(.text.RCM_EnableClockSwitch), (16 bytes).
+    Removing apm32f00x_rcm.o(.ARM.exidx.text.RCM_EnableClockSwitch), (8 bytes).
+    Removing apm32f00x_rcm.o(.text.RCM_DisableClockSwitch), (16 bytes).
+    Removing apm32f00x_rcm.o(.ARM.exidx.text.RCM_DisableClockSwitch), (8 bytes).
+    Removing apm32f00x_rcm.o(.text.RCM_ConfigRegulatorPower), (24 bytes).
+    Removing apm32f00x_rcm.o(.ARM.exidx.text.RCM_ConfigRegulatorPower), (8 bytes).
+    Removing apm32f00x_rcm.o(.text.RCM_EnableAPBPeriphClock), (52 bytes).
+    Removing apm32f00x_rcm.o(.ARM.exidx.text.RCM_EnableAPBPeriphClock), (8 bytes).
+    Removing apm32f00x_rcm.o(.text.RCM_DisableAPBPeriphClock), (72 bytes).
+    Removing apm32f00x_rcm.o(.ARM.exidx.text.RCM_DisableAPBPeriphClock), (8 bytes).
+    Removing apm32f00x_rcm.o(.text.RCM_ConfigClockSwitch), (224 bytes).
+    Removing apm32f00x_rcm.o(.ARM.exidx.text.RCM_ConfigClockSwitch), (8 bytes).
+    Removing apm32f00x_rcm.o(.text.RCM_ConfigHIRCDiv), (36 bytes).
+    Removing apm32f00x_rcm.o(.ARM.exidx.text.RCM_ConfigHIRCDiv), (8 bytes).
+    Removing apm32f00x_rcm.o(.text.RCM_ConfigCPUClkDiv), (20 bytes).
+    Removing apm32f00x_rcm.o(.ARM.exidx.text.RCM_ConfigCPUClkDiv), (8 bytes).
+    Removing apm32f00x_rcm.o(.text.RCM_ConfigClockOutput), (24 bytes).
+    Removing apm32f00x_rcm.o(.ARM.exidx.text.RCM_ConfigClockOutput), (8 bytes).
+    Removing apm32f00x_rcm.o(.text.RCM_EnableInterrupt), (40 bytes).
+    Removing apm32f00x_rcm.o(.ARM.exidx.text.RCM_EnableInterrupt), (8 bytes).
+    Removing apm32f00x_rcm.o(.text.RCM_DisableInterrupt), (40 bytes).
+    Removing apm32f00x_rcm.o(.ARM.exidx.text.RCM_DisableInterrupt), (8 bytes).
+    Removing apm32f00x_rcm.o(.text.RCM_EnableClockSecuritySystem), (16 bytes).
+    Removing apm32f00x_rcm.o(.ARM.exidx.text.RCM_EnableClockSecuritySystem), (8 bytes).
+    Removing apm32f00x_rcm.o(.text.RCM_GetMasterClockSource), (12 bytes).
+    Removing apm32f00x_rcm.o(.ARM.exidx.text.RCM_GetMasterClockSource), (8 bytes).
+    Removing apm32f00x_rcm.o(.ARM.exidx.text.RCM_GetMasterClockFreq), (8 bytes).
+    Removing apm32f00x_rcm.o(.text.RCM_SetHIRCTrim), (16 bytes).
+    Removing apm32f00x_rcm.o(.ARM.exidx.text.RCM_SetHIRCTrim), (8 bytes).
+    Removing apm32f00x_rcm.o(.text.RCM_ResetClockSwitch), (16 bytes).
+    Removing apm32f00x_rcm.o(.ARM.exidx.text.RCM_ResetClockSwitch), (8 bytes).
+    Removing apm32f00x_rcm.o(.text.RCM_ReadClockFlag), (84 bytes).
+    Removing apm32f00x_rcm.o(.ARM.exidx.text.RCM_ReadClockFlag), (8 bytes).
+    Removing apm32f00x_rcm.o(.text.RCM_ReadIntFlag), (44 bytes).
+    Removing apm32f00x_rcm.o(.ARM.exidx.text.RCM_ReadIntFlag), (8 bytes).
+    Removing apm32f00x_rcm.o(.text.RCM_ClearIntFlag), (40 bytes).
+    Removing apm32f00x_rcm.o(.ARM.exidx.text.RCM_ClearIntFlag), (8 bytes).
+    Removing apm32f00x_rcm.o(.text.RCM_ReadResetFlag), (20 bytes).
+    Removing apm32f00x_rcm.o(.ARM.exidx.text.RCM_ReadResetFlag), (8 bytes).
+    Removing apm32f00x_rcm.o(.text.RCM_ClearResetFlag), (16 bytes).
+    Removing apm32f00x_rcm.o(.ARM.exidx.text.RCM_ClearResetFlag), (8 bytes).
+    Removing apm32f00x_spi.o(.text), (0 bytes).
+    Removing apm32f00x_spi.o(.text.SPI_Reset), (24 bytes).
+    Removing apm32f00x_spi.o(.ARM.exidx.text.SPI_Reset), (8 bytes).
+    Removing apm32f00x_spi.o(.text.SPI_Config), (140 bytes).
+    Removing apm32f00x_spi.o(.ARM.exidx.text.SPI_Config), (8 bytes).
+    Removing apm32f00x_spi.o(.text.SPI_ConfigStructInit), (22 bytes).
+    Removing apm32f00x_spi.o(.ARM.exidx.text.SPI_ConfigStructInit), (8 bytes).
+    Removing apm32f00x_spi.o(.text.SPI_Enable), (16 bytes).
+    Removing apm32f00x_spi.o(.ARM.exidx.text.SPI_Enable), (8 bytes).
+    Removing apm32f00x_spi.o(.text.SPI_Disable), (16 bytes).
+    Removing apm32f00x_spi.o(.ARM.exidx.text.SPI_Disable), (8 bytes).
+    Removing apm32f00x_spi.o(.text.SPI_ConfigMode), (32 bytes).
+    Removing apm32f00x_spi.o(.ARM.exidx.text.SPI_ConfigMode), (8 bytes).
+    Removing apm32f00x_spi.o(.text.SPI_EnableInterrupt), (16 bytes).
+    Removing apm32f00x_spi.o(.ARM.exidx.text.SPI_EnableInterrupt), (8 bytes).
+    Removing apm32f00x_spi.o(.text.SPI_DisableInterrupt), (16 bytes).
+    Removing apm32f00x_spi.o(.ARM.exidx.text.SPI_DisableInterrupt), (8 bytes).
+    Removing apm32f00x_spi.o(.text.SPI_TxData), (12 bytes).
+    Removing apm32f00x_spi.o(.ARM.exidx.text.SPI_TxData), (8 bytes).
+    Removing apm32f00x_spi.o(.text.SPI_RxData), (12 bytes).
+    Removing apm32f00x_spi.o(.ARM.exidx.text.SPI_RxData), (8 bytes).
+    Removing apm32f00x_spi.o(.text.SPI_EnableSlaveSoftwareControl), (16 bytes).
+    Removing apm32f00x_spi.o(.ARM.exidx.text.SPI_EnableSlaveSoftwareControl), (8 bytes).
+    Removing apm32f00x_spi.o(.text.SPI_DisableSlaveSoftwareControl), (16 bytes).
+    Removing apm32f00x_spi.o(.ARM.exidx.text.SPI_DisableSlaveSoftwareControl), (8 bytes).
+    Removing apm32f00x_spi.o(.text.SPI_TxCRC), (16 bytes).
+    Removing apm32f00x_spi.o(.ARM.exidx.text.SPI_TxCRC), (8 bytes).
+    Removing apm32f00x_spi.o(.text.SPI_EnableCRC), (16 bytes).
+    Removing apm32f00x_spi.o(.ARM.exidx.text.SPI_EnableCRC), (8 bytes).
+    Removing apm32f00x_spi.o(.text.SPI_DisableCRC), (16 bytes).
+    Removing apm32f00x_spi.o(.ARM.exidx.text.SPI_DisableCRC), (8 bytes).
+    Removing apm32f00x_spi.o(.text.SPI_ReadRxCRC), (12 bytes).
+    Removing apm32f00x_spi.o(.ARM.exidx.text.SPI_ReadRxCRC), (8 bytes).
+    Removing apm32f00x_spi.o(.text.SPI_ReadTxCRC), (12 bytes).
+    Removing apm32f00x_spi.o(.ARM.exidx.text.SPI_ReadTxCRC), (8 bytes).
+    Removing apm32f00x_spi.o(.text.SPI_SetCRCPolynomial), (12 bytes).
+    Removing apm32f00x_spi.o(.ARM.exidx.text.SPI_SetCRCPolynomial), (8 bytes).
+    Removing apm32f00x_spi.o(.text.SPI_ReadCRCPolynomial), (12 bytes).
+    Removing apm32f00x_spi.o(.ARM.exidx.text.SPI_ReadCRCPolynomial), (8 bytes).
+    Removing apm32f00x_spi.o(.text.SPI_ReadStatusFlag), (20 bytes).
+    Removing apm32f00x_spi.o(.ARM.exidx.text.SPI_ReadStatusFlag), (8 bytes).
+    Removing apm32f00x_spi.o(.text.SPI_ClearStatusFlag), (16 bytes).
+    Removing apm32f00x_spi.o(.ARM.exidx.text.SPI_ClearStatusFlag), (8 bytes).
+    Removing apm32f00x_spi.o(.text.SPI_ReadIntFlag), (32 bytes).
+    Removing apm32f00x_spi.o(.ARM.exidx.text.SPI_ReadIntFlag), (8 bytes).
+    Removing apm32f00x_spi.o(.text.SPI_ClearIntFlag), (24 bytes).
+    Removing apm32f00x_spi.o(.ARM.exidx.text.SPI_ClearIntFlag), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text), (0 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_Reset), (104 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_Reset), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_ConfigTimerBase), (62 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigTimerBase), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_ConfigTimeBaseStructInit), (16 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigTimeBaseStructInit), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_EnableChannel), (28 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_EnableChannel), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_DisableChannel), (28 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_DisableChannel), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_ConfigOutputComare1), (120 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigOutputComare1), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_ConfigOutputComare2), (124 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigOutputComare2), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_ConfigOutputComare3), (74 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigOutputComare3), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_ConfigOutputComare4), (76 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigOutputComare4), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_ConfigOutputCompare), (432 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigOutputCompare), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_OCStructInit), (24 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_OCStructInit), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_ConfigOutputCompareMode), (90 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigOutputCompareMode), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_ConfigInputCapture1), (68 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigInputCapture1), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_ConfigInputCapture2), (68 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigInputCapture2), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_ConfigInputCapture3), (68 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigInputCapture3), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_ConfigInputCapture4), (68 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigInputCapture4), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_ConfigInputCapture), (332 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigInputCapture), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_ICStructInit), (16 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ICStructInit), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_SetDeadTime), (4 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_SetDeadTime), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_ConfigProtectionLevel), (14 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigProtectionLevel), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_SelectOffStateInRunMode), (16 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_SelectOffStateInRunMode), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_SelectOffStateInIdleMode), (16 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_SelectOffStateInIdleMode), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_ConfigBreakPolarity), (16 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigBreakPolarity), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_EnableBreak), (10 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_EnableBreak), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_DisableBreak), (10 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_DisableBreak), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_EnableAutomaticOutput), (10 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_EnableAutomaticOutput), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_DisableAutomaticOutput), (10 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_DisableAutomaticOutput), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_ConfigInputPWM), (320 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigInputPWM), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_Enable), (10 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_Enable), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_Disable), (10 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_Disable), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_EnableOutputPWM), (10 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_EnableOutputPWM), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_DisableOutputPWM), (10 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_DisableOutputPWM), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_EnableInterrupt), (8 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_EnableInterrupt), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_DisableInterrupt), (8 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_DisableInterrupt), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_ConfigExternalTrigger), (44 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigExternalTrigger), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_ConfigExternalClockMode2), (52 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigExternalClockMode2), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_ConfigExternalClockMode1), (128 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigExternalClockMode1), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_ConfigCountMode), (30 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigCountMode), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_SetDivider), (10 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_SetDivider), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_EnableSinglePulseMode), (10 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_EnableSinglePulseMode), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_DisableSinglePulseMode), (10 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_DisableSinglePulseMode), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_ConfigUpdate), (30 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigUpdate), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_ConfigInputTrigger), (16 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigInputTrigger), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_ConfigEncodeInterface), (70 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigEncodeInterface), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_ConfigCCUpdateSource), (16 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigCCUpdateSource), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_EnableCompareCaptureBuffer), (10 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_EnableCompareCaptureBuffer), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_DisableCompareCaptureBuffer), (10 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_DisableCompareCaptureBuffer), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_EnableAutoReloadBuffer), (10 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_EnableAutoReloadBuffer), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_DisableAutoReloadBuffer), (10 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_DisableAutoReloadBuffer), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_EnableOutputCompareBuffer), (64 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_EnableOutputCompareBuffer), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_DisableOutputCompareBuffer), (64 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_DisableOutputCompareBuffer), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_EnableOutputCompareFastMode), (64 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_EnableOutputCompareFastMode), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_DisableOutputCompareFastMode), (64 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_DisableOutputCompareFastMode), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_GenerateEvent), (4 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_GenerateEvent), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_ConfigOutputComparePolarity), (90 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigOutputComparePolarity), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_ConfigOutputCompareComplementPolarity), (46 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigOutputCompareComplementPolarity), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_EnableCompareCapture), (64 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_EnableCompareCapture), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_DisableCompareCapture), (64 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_DisableCompareCapture), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_EnableCompareCaptureComplement), (32 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_EnableCompareCaptureComplement), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_DisableCompareCaptureComplement), (32 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_DisableCompareCaptureComplement), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_SetCounter), (10 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_SetCounter), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_SetAutoReloadVaue), (10 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_SetAutoReloadVaue), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_SetCompareCapture), (64 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_SetCompareCapture), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_ReadCapture1), (12 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ReadCapture1), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_ReadCapture2), (12 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ReadCapture2), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_ReadCapture3), (12 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ReadCapture3), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_ReadCapture4), (12 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ReadCapture4), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_ReadCompareCapture), (54 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ReadCompareCapture), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_SetInputCaptureDivider), (90 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_SetInputCaptureDivider), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_ReadCounter), (12 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ReadCounter), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_ReadDivider), (12 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ReadDivider), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_ReadStatusFlag), (40 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ReadStatusFlag), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_ClearStatusFlag), (32 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ClearStatusFlag), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_ReadIntFlag), (18 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ReadIntFlag), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_ClearIntFlag), (8 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ClearIntFlag), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_ConfigSlaveMode), (14 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigSlaveMode), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_ConfigMasterMode), (16 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_ConfigMasterMode), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_EnableMasterMode), (10 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_EnableMasterMode), (8 bytes).
+    Removing apm32f00x_tmr1.o(.text.TMR1_DisableMasterMode), (10 bytes).
+    Removing apm32f00x_tmr1.o(.ARM.exidx.text.TMR1_DisableMasterMode), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text), (0 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_Reset), (92 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_Reset), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_ConfigTimerBase), (28 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ConfigTimerBase), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_ConfigOutputComare1), (68 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ConfigOutputComare1), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_ConfigOutputComare2), (72 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ConfigOutputComare2), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_ConfigOutputComare3), (68 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ConfigOutputComare3), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_ConfigOutputCompare), (204 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ConfigOutputCompare), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_OCStructInit), (20 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_OCStructInit), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_ConfigOutputCompareMode), (76 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ConfigOutputCompareMode), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_ConfigInputCapture1), (72 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ConfigInputCapture1), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_ConfigInputCapture2), (72 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ConfigInputCapture2), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_ConfigInputCapture3), (72 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ConfigInputCapture3), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_ConfigInputCapture), (264 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ConfigInputCapture), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_ICStructInit), (16 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ICStructInit), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_ConfigInputPWM), (312 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ConfigInputPWM), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_Enable), (16 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_Enable), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_Disable), (16 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_Disable), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_EnableInterrupt), (16 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_EnableInterrupt), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_DisableInterrupt), (16 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_DisableInterrupt), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_SetDivider), (16 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_SetDivider), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_ConfigInputTrigger), (24 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ConfigInputTrigger), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_EnableAutoReloadBuffer), (16 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_EnableAutoReloadBuffer), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_DisableAutoReloadBuffer), (16 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_DisableAutoReloadBuffer), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_EnableOutputCompareBuffer), (56 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_EnableOutputCompareBuffer), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_DisableOutputCompareBuffer), (56 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_DisableOutputCompareBuffer), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_GenerateEvent), (12 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_GenerateEvent), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_ConfigOutputComparePolarity), (76 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ConfigOutputComparePolarity), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_EnableCompareCapture), (56 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_EnableCompareCapture), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_DisableCompareCapture), (56 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_DisableCompareCapture), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_SetCounter), (16 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_SetCounter), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_ConfigUpdate), (36 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ConfigUpdate), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_EnableSinglePulseMode), (16 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_EnableSinglePulseMode), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_DisableSinglePulseMode), (16 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_DisableSinglePulseMode), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_SetAutoReloadVaue), (16 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_SetAutoReloadVaue), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_SetCompareCapture), (56 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_SetCompareCapture), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_ReadCapture1), (20 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ReadCapture1), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_ReadCapture2), (20 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ReadCapture2), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_ReadCapture3), (20 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ReadCapture3), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_ReadCompareCapture), (40 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ReadCompareCapture), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_SetInputCaptureDivider), (76 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_SetInputCaptureDivider), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_ReadCounter), (20 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ReadCounter), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_ReadDivider), (12 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ReadDivider), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_ReadStatusFlag), (48 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ReadStatusFlag), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_ClearStatusFlag), (40 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ClearStatusFlag), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_ReadIntFlag), (24 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ReadIntFlag), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_ClearIntFlag), (16 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ClearIntFlag), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_ConfigSlaveMode), (20 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ConfigSlaveMode), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_ConfigMasterMode), (24 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_ConfigMasterMode), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_EnableMasterMode), (16 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_EnableMasterMode), (8 bytes).
+    Removing apm32f00x_tmr2.o(.text.TMR2_DisableMasterMode), (16 bytes).
+    Removing apm32f00x_tmr2.o(.ARM.exidx.text.TMR2_DisableMasterMode), (8 bytes).
+    Removing apm32f00x_tmr4.o(.text), (0 bytes).
+    Removing apm32f00x_tmr4.o(.text.TMR4_Reset), (28 bytes).
+    Removing apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_Reset), (8 bytes).
+    Removing apm32f00x_tmr4.o(.text.TMR4_ConfigTimerBase), (12 bytes).
+    Removing apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_ConfigTimerBase), (8 bytes).
+    Removing apm32f00x_tmr4.o(.text.TMR4_Enable), (16 bytes).
+    Removing apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_Enable), (8 bytes).
+    Removing apm32f00x_tmr4.o(.text.TMR4_Disable), (16 bytes).
+    Removing apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_Disable), (8 bytes).
+    Removing apm32f00x_tmr4.o(.text.TMR4_EnableInterrupt), (16 bytes).
+    Removing apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_EnableInterrupt), (8 bytes).
+    Removing apm32f00x_tmr4.o(.text.TMR4_DisableInterrupt), (16 bytes).
+    Removing apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_DisableInterrupt), (8 bytes).
+    Removing apm32f00x_tmr4.o(.text.TMR4_SetDivider), (16 bytes).
+    Removing apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_SetDivider), (8 bytes).
+    Removing apm32f00x_tmr4.o(.text.TMR4_ConfigInputTrigger), (24 bytes).
+    Removing apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_ConfigInputTrigger), (8 bytes).
+    Removing apm32f00x_tmr4.o(.text.TMR4_EnableAutoReloadBuffer), (16 bytes).
+    Removing apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_EnableAutoReloadBuffer), (8 bytes).
+    Removing apm32f00x_tmr4.o(.text.TMR4_ConfigUpdate), (36 bytes).
+    Removing apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_ConfigUpdate), (8 bytes).
+    Removing apm32f00x_tmr4.o(.text.TMR4_EnableSinglePulseMode), (16 bytes).
+    Removing apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_EnableSinglePulseMode), (8 bytes).
+    Removing apm32f00x_tmr4.o(.text.TMR4_DisableSinglePulseMode), (16 bytes).
+    Removing apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_DisableSinglePulseMode), (8 bytes).
+    Removing apm32f00x_tmr4.o(.text.TMR4_DisableAutoReloadBuffer), (16 bytes).
+    Removing apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_DisableAutoReloadBuffer), (8 bytes).
+    Removing apm32f00x_tmr4.o(.text.TMR4_GenerateEvent), (12 bytes).
+    Removing apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_GenerateEvent), (8 bytes).
+    Removing apm32f00x_tmr4.o(.text.TMR4_SetCounter), (12 bytes).
+    Removing apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_SetCounter), (8 bytes).
+    Removing apm32f00x_tmr4.o(.text.TMR4_SetAutoReloadVaue), (12 bytes).
+    Removing apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_SetAutoReloadVaue), (8 bytes).
+    Removing apm32f00x_tmr4.o(.text.TMR4_ReadCounter), (12 bytes).
+    Removing apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_ReadCounter), (8 bytes).
+    Removing apm32f00x_tmr4.o(.text.TMR4_ReadDivider), (12 bytes).
+    Removing apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_ReadDivider), (8 bytes).
+    Removing apm32f00x_tmr4.o(.text.TMR4_ReadStatusFlag), (20 bytes).
+    Removing apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_ReadStatusFlag), (8 bytes).
+    Removing apm32f00x_tmr4.o(.text.TMR4_ClearStatusFlag), (16 bytes).
+    Removing apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_ClearStatusFlag), (8 bytes).
+    Removing apm32f00x_tmr4.o(.text.TMR4_ReadIntFlag), (24 bytes).
+    Removing apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_ReadIntFlag), (8 bytes).
+    Removing apm32f00x_tmr4.o(.text.TMR4_ClearIntFlag), (16 bytes).
+    Removing apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_ClearIntFlag), (8 bytes).
+    Removing apm32f00x_tmr4.o(.text.TMR4_ConfigSlaveMode), (20 bytes).
+    Removing apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_ConfigSlaveMode), (8 bytes).
+    Removing apm32f00x_tmr4.o(.text.TMR4_ConfigMasterMode), (24 bytes).
+    Removing apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_ConfigMasterMode), (8 bytes).
+    Removing apm32f00x_tmr4.o(.text.TMR4_EnableMasterMode), (16 bytes).
+    Removing apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_EnableMasterMode), (8 bytes).
+    Removing apm32f00x_tmr4.o(.text.TMR4_DisableMasterMode), (16 bytes).
+    Removing apm32f00x_tmr4.o(.ARM.exidx.text.TMR4_DisableMasterMode), (8 bytes).
+    Removing apm32f00x_usart.o(.text), (0 bytes).
+    Removing apm32f00x_usart.o(.text.USART_Reset), (52 bytes).
+    Removing apm32f00x_usart.o(.ARM.exidx.text.USART_Reset), (8 bytes).
+    Removing apm32f00x_usart.o(.ARM.exidx.text.USART_Config), (8 bytes).
+    Removing apm32f00x_usart.o(.text.USART_EnableInterrupt), (46 bytes).
+    Removing apm32f00x_usart.o(.ARM.exidx.text.USART_EnableInterrupt), (8 bytes).
+    Removing apm32f00x_usart.o(.text.USART_ConfigStructInit), (20 bytes).
+    Removing apm32f00x_usart.o(.ARM.exidx.text.USART_ConfigStructInit), (8 bytes).
+    Removing apm32f00x_usart.o(.ARM.exidx.text.USART_Enable), (8 bytes).
+    Removing apm32f00x_usart.o(.text.USART_Disable), (10 bytes).
+    Removing apm32f00x_usart.o(.ARM.exidx.text.USART_Disable), (8 bytes).
+    Removing apm32f00x_usart.o(.text.USART_DisableInterrupt), (58 bytes).
+    Removing apm32f00x_usart.o(.ARM.exidx.text.USART_DisableInterrupt), (8 bytes).
+    Removing apm32f00x_usart.o(.text.USART_EnableHalfDuplex), (10 bytes).
+    Removing apm32f00x_usart.o(.ARM.exidx.text.USART_EnableHalfDuplex), (8 bytes).
+    Removing apm32f00x_usart.o(.text.USART_DisableHalfDuplex), (10 bytes).
+    Removing apm32f00x_usart.o(.ARM.exidx.text.USART_DisableHalfDuplex), (8 bytes).
+    Removing apm32f00x_usart.o(.text.USART_ConfigIrDA), (16 bytes).
+    Removing apm32f00x_usart.o(.ARM.exidx.text.USART_ConfigIrDA), (8 bytes).
+    Removing apm32f00x_usart.o(.text.USART_EnableIrDA), (10 bytes).
+    Removing apm32f00x_usart.o(.ARM.exidx.text.USART_EnableIrDA), (8 bytes).
+    Removing apm32f00x_usart.o(.text.USART_DisableIrDA), (10 bytes).
+    Removing apm32f00x_usart.o(.ARM.exidx.text.USART_DisableIrDA), (8 bytes).
+    Removing apm32f00x_usart.o(.text.USART_ConfigLINBreakDetectLength), (16 bytes).
+    Removing apm32f00x_usart.o(.ARM.exidx.text.USART_ConfigLINBreakDetectLength), (8 bytes).
+    Removing apm32f00x_usart.o(.text.USART_EnableLIN), (10 bytes).
+    Removing apm32f00x_usart.o(.ARM.exidx.text.USART_EnableLIN), (8 bytes).
+    Removing apm32f00x_usart.o(.text.USART_DisableLIN), (10 bytes).
+    Removing apm32f00x_usart.o(.ARM.exidx.text.USART_DisableLIN), (8 bytes).
+    Removing apm32f00x_usart.o(.text.USART_EnableSmartCard), (10 bytes).
+    Removing apm32f00x_usart.o(.ARM.exidx.text.USART_EnableSmartCard), (8 bytes).
+    Removing apm32f00x_usart.o(.text.USART_DisableSmartCard), (10 bytes).
+    Removing apm32f00x_usart.o(.ARM.exidx.text.USART_DisableSmartCard), (8 bytes).
+    Removing apm32f00x_usart.o(.text.USART_EnableSmartCardNACK), (10 bytes).
+    Removing apm32f00x_usart.o(.ARM.exidx.text.USART_EnableSmartCardNACK), (8 bytes).
+    Removing apm32f00x_usart.o(.text.USART_DisableSmartCardNACK), (10 bytes).
+    Removing apm32f00x_usart.o(.ARM.exidx.text.USART_DisableSmartCardNACK), (8 bytes).
+    Removing apm32f00x_usart.o(.text.USART_EnableMuteMode), (10 bytes).
+    Removing apm32f00x_usart.o(.ARM.exidx.text.USART_EnableMuteMode), (8 bytes).
+    Removing apm32f00x_usart.o(.text.USART_DisableMuteMode), (10 bytes).
+    Removing apm32f00x_usart.o(.ARM.exidx.text.USART_DisableMuteMode), (8 bytes).
+    Removing apm32f00x_usart.o(.text.USART_ConfigMuteModeWakeUp), (16 bytes).
+    Removing apm32f00x_usart.o(.ARM.exidx.text.USART_ConfigMuteModeWakeUp), (8 bytes).
+    Removing apm32f00x_usart.o(.text.USART_RxData8), (6 bytes).
+    Removing apm32f00x_usart.o(.ARM.exidx.text.USART_RxData8), (8 bytes).
+    Removing apm32f00x_usart.o(.text.USART_RxData9), (18 bytes).
+    Removing apm32f00x_usart.o(.ARM.exidx.text.USART_RxData9), (8 bytes).
+    Removing apm32f00x_usart.o(.ARM.exidx.text.USART_TxData8), (8 bytes).
+    Removing apm32f00x_usart.o(.text.USART_TxData9), (30 bytes).
+    Removing apm32f00x_usart.o(.ARM.exidx.text.USART_TxData9), (8 bytes).
+    Removing apm32f00x_usart.o(.text.USART_TxBreak), (10 bytes).
+    Removing apm32f00x_usart.o(.ARM.exidx.text.USART_TxBreak), (8 bytes).
+    Removing apm32f00x_usart.o(.text.USART_Address), (14 bytes).
+    Removing apm32f00x_usart.o(.ARM.exidx.text.USART_Address), (8 bytes).
+    Removing apm32f00x_usart.o(.text.USART_ConfigGuardTime), (12 bytes).
+    Removing apm32f00x_usart.o(.ARM.exidx.text.USART_ConfigGuardTime), (8 bytes).
+    Removing apm32f00x_usart.o(.text.USART_ConfigDivNumber), (12 bytes).
+    Removing apm32f00x_usart.o(.ARM.exidx.text.USART_ConfigDivNumber), (8 bytes).
+    Removing apm32f00x_usart.o(.text.USART_ConfigSyncClock), (66 bytes).
+    Removing apm32f00x_usart.o(.ARM.exidx.text.USART_ConfigSyncClock), (8 bytes).
+    Removing apm32f00x_usart.o(.text.USART_ConfigSyncClockStructInit), (14 bytes).
+    Removing apm32f00x_usart.o(.ARM.exidx.text.USART_ConfigSyncClockStructInit), (8 bytes).
+    Removing apm32f00x_usart.o(.ARM.exidx.text.USART_ReadStatusFlag), (8 bytes).
+    Removing apm32f00x_usart.o(.text.USART_ClearStatusFlag), (24 bytes).
+    Removing apm32f00x_usart.o(.ARM.exidx.text.USART_ClearStatusFlag), (8 bytes).
+    Removing apm32f00x_usart.o(.text.USART_ReadIntFlag), (54 bytes).
+    Removing apm32f00x_usart.o(.ARM.exidx.text.USART_ReadIntFlag), (8 bytes).
+    Removing apm32f00x_usart.o(.text.USART_ClearIntFlag), (20 bytes).
+    Removing apm32f00x_usart.o(.ARM.exidx.text.USART_ClearIntFlag), (8 bytes).
+    Removing apm32f00x_wupt.o(.text), (0 bytes).
+    Removing apm32f00x_wupt.o(.text.WUPT_Reset), (20 bytes).
+    Removing apm32f00x_wupt.o(.ARM.exidx.text.WUPT_Reset), (8 bytes).
+    Removing apm32f00x_wupt.o(.text.WUPT_Config), (36 bytes).
+    Removing apm32f00x_wupt.o(.ARM.exidx.text.WUPT_Config), (8 bytes).
+    Removing apm32f00x_wupt.o(.text.WUPT_Enable), (16 bytes).
+    Removing apm32f00x_wupt.o(.ARM.exidx.text.WUPT_Enable), (8 bytes).
+    Removing apm32f00x_wupt.o(.text.WUPT_Disable), (16 bytes).
+    Removing apm32f00x_wupt.o(.ARM.exidx.text.WUPT_Disable), (8 bytes).
+    Removing apm32f00x_wupt.o(.text.WUPT_CalibrationLIRC), (64 bytes).
+    Removing apm32f00x_wupt.o(.ARM.exidx.text.WUPT_CalibrationLIRC), (8 bytes).
+    Removing apm32f00x_wupt.o(.text.WUPT_EnterIdleMode), (20 bytes).
+    Removing apm32f00x_wupt.o(.ARM.exidx.text.WUPT_EnterIdleMode), (8 bytes).
+    Removing apm32f00x_wupt.o(.text.WUPT_ReadIntFlag), (16 bytes).
+    Removing apm32f00x_wupt.o(.ARM.exidx.text.WUPT_ReadIntFlag), (8 bytes).
+    Removing apm32f00x_wupt.o(.text.WUPT_EnableLIRCMeasurement), (16 bytes).
+    Removing apm32f00x_wupt.o(.ARM.exidx.text.WUPT_EnableLIRCMeasurement), (8 bytes).
+    Removing apm32f00x_wupt.o(.text.WUPT_DisableLIRCMeasurement), (16 bytes).
+    Removing apm32f00x_wupt.o(.ARM.exidx.text.WUPT_DisableLIRCMeasurement), (8 bytes).
+    Removing apm32f00x_wupt.o(.rodata.g_dividerTab), (17 bytes).
+    Removing apm32f00x_wupt.o(.rodata.g_timeBaseTab), (17 bytes).
+    Removing apm32f00x_wwdt.o(.text), (0 bytes).
+    Removing apm32f00x_wwdt.o(.text.WWDT_Config), (28 bytes).
+    Removing apm32f00x_wwdt.o(.ARM.exidx.text.WWDT_Config), (8 bytes).
+    Removing apm32f00x_wwdt.o(.text.WWDT_SetCounter), (16 bytes).
+    Removing apm32f00x_wwdt.o(.ARM.exidx.text.WWDT_SetCounter), (8 bytes).
+    Removing apm32f00x_wwdt.o(.text.WWDT_ReadCounter), (16 bytes).
+    Removing apm32f00x_wwdt.o(.ARM.exidx.text.WWDT_ReadCounter), (8 bytes).
+    Removing apm32f00x_wwdt.o(.text.WWDT_SoftwareReset), (12 bytes).
+    Removing apm32f00x_wwdt.o(.ARM.exidx.text.WWDT_SoftwareReset), (8 bytes).
+    Removing apm32f00x_wwdt.o(.text.WWDT_SetWidowData), (16 bytes).
+    Removing apm32f00x_wwdt.o(.ARM.exidx.text.WWDT_SetWidowData), (8 bytes).
+    Removing board.o(.text), (0 bytes).
+    Removing board.o(.ARM.exidx.text.Board_LedInit), (8 bytes).
+    Removing board.o(.ARM.exidx.text.Board_LedOn), (8 bytes).
+    Removing board.o(.ARM.exidx.text.Board_LedOff), (8 bytes).
+    Removing board.o(.text.Board_LedToggle), (24 bytes).
+    Removing board.o(.ARM.exidx.text.Board_LedToggle), (8 bytes).
+    Removing board.o(.text.Board_KeyInit), (48 bytes).
+    Removing board.o(.ARM.exidx.text.Board_KeyInit), (8 bytes).
+    Removing board.o(.text.Board_ReadKeyState), (16 bytes).
+    Removing board.o(.ARM.exidx.text.Board_ReadKeyState), (8 bytes).
+    Removing board.o(.rodata.g_keyGPIO), (8 bytes).
+    Removing usart_app.o(.text), (0 bytes).
+    Removing usart_app.o(.ARM.exidx.text.Serial_begin), (8 bytes).
+    Removing usart_app.o(.ARM.exidx.text.SerialPrint_NumString), (8 bytes).
+    Removing usart_app.o(.text.Serial_print_string), (52 bytes).
+    Removing usart_app.o(.ARM.exidx.text.Serial_print_string), (8 bytes).
+    Removing usart_app.o(.text.Serial_print_char), (32 bytes).
+    Removing usart_app.o(.ARM.exidx.text.Serial_print_char), (8 bytes).
+    Removing usart_app.o(.text.Serial_print_int), (104 bytes).
+    Removing usart_app.o(.ARM.exidx.text.Serial_print_int), (8 bytes).
+    Removing usart_app.o(.text.Serial_newline), (32 bytes).
+    Removing usart_app.o(.ARM.exidx.text.Serial_newline), (8 bytes).
+    Removing main.o(.text), (0 bytes).
+    Removing main.o(.ARM.exidx.text.main), (8 bytes).
+    Removing main.o(.text.LedInit), (32 bytes).
+    Removing main.o(.ARM.exidx.text.LedInit), (8 bytes).
+    Removing main.o(.text.ADCInit), (96 bytes).
+    Removing main.o(.ARM.exidx.text.ADCInit), (8 bytes).
+    Removing main.o(.ARM.exidx.text.ADCMeasure), (8 bytes).
+    Removing main.o(.ARM.exidx.text.ADCCalibration), (8 bytes).
+    Removing main.o(.text.ADC_GPIO_Init), (52 bytes).
+    Removing main.o(.ARM.exidx.text.ADC_GPIO_Init), (8 bytes).
+    Removing main.o(.ARM.use_no_argv), (4 bytes).
+    Removing apm32f00x_int.o(.text), (0 bytes).
+    Removing apm32f00x_int.o(.ARM.exidx.text.NMI_Handler), (8 bytes).
+    Removing apm32f00x_int.o(.ARM.exidx.text.HardFault_Handler), (8 bytes).
+    Removing apm32f00x_int.o(.ARM.exidx.text.SVC_Handler), (8 bytes).
+    Removing apm32f00x_int.o(.ARM.exidx.text.PendSV_Handler), (8 bytes).
+    Removing apm32f00x_int.o(.ARM.exidx.text.SysTick_Handler), (8 bytes).
+    Removing apm32f00x_int.o(.ARM.exidx.text.ADC_IRQHandler), (8 bytes).
+
+815 unused section(s) (total 18484 bytes) removed from the image.
+
+==============================================================================
+
+Image Symbol Table
+
+    Local Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    ../clib/division.s                       0x00000000   Number         0  aeabi_sdivfast.o ABSOLUTE
+    ../clib/division.s                       0x00000000   Number         0  aeabi_sdivfast_div0.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  uidiv_div0.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  idiv_div0.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  idiv0.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ..\..\..\..\..\Library\Device\Geehy\APM32F00x\Source\ARM\startup_apm32f0xx.s 0x00000000   Number         0  startup_apm32f0xx.o ABSOLUTE
+    Board.c                                  0x00000000   Number         0  board.o ABSOLUTE
+    apm32f00x_adc.c                          0x00000000   Number         0  apm32f00x_adc.o ABSOLUTE
+    apm32f00x_buzzer.c                       0x00000000   Number         0  apm32f00x_buzzer.o ABSOLUTE
+    apm32f00x_eint.c                         0x00000000   Number         0  apm32f00x_eint.o ABSOLUTE
+    apm32f00x_fmc.c                          0x00000000   Number         0  apm32f00x_fmc.o ABSOLUTE
+    apm32f00x_gpio.c                         0x00000000   Number         0  apm32f00x_gpio.o ABSOLUTE
+    apm32f00x_i2c.c                          0x00000000   Number         0  apm32f00x_i2c.o ABSOLUTE
+    apm32f00x_int.c                          0x00000000   Number         0  apm32f00x_int.o ABSOLUTE
+    apm32f00x_iwdt.c                         0x00000000   Number         0  apm32f00x_iwdt.o ABSOLUTE
+    apm32f00x_misc.c                         0x00000000   Number         0  apm32f00x_misc.o ABSOLUTE
+    apm32f00x_rcm.c                          0x00000000   Number         0  apm32f00x_rcm.o ABSOLUTE
+    apm32f00x_spi.c                          0x00000000   Number         0  apm32f00x_spi.o ABSOLUTE
+    apm32f00x_tmr1.c                         0x00000000   Number         0  apm32f00x_tmr1.o ABSOLUTE
+    apm32f00x_tmr2.c                         0x00000000   Number         0  apm32f00x_tmr2.o ABSOLUTE
+    apm32f00x_tmr4.c                         0x00000000   Number         0  apm32f00x_tmr4.o ABSOLUTE
+    apm32f00x_usart.c                        0x00000000   Number         0  apm32f00x_usart.o ABSOLUTE
+    apm32f00x_wupt.c                         0x00000000   Number         0  apm32f00x_wupt.o ABSOLUTE
+    apm32f00x_wwdt.c                         0x00000000   Number         0  apm32f00x_wwdt.o ABSOLUTE
+    dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
+    handlers.s                               0x00000000   Number         0  handlers.o ABSOLUTE
+    init.s                                   0x00000000   Number         0  init.o ABSOLUTE
+    main.c                                   0x00000000   Number         0  main.o ABSOLUTE
+    system_apm32f00x.c                       0x00000000   Number         0  system_apm32f00x.o ABSOLUTE
+    usart_app.c                              0x00000000   Number         0  usart_app.o ABSOLUTE
+    RESET                                    0x00000000   Section      188  startup_apm32f0xx.o(RESET)
+    .ARM.Collect$$$$00000000                 0x000000bc   Section        0  entry.o(.ARM.Collect$$$$00000000)
+    .ARM.Collect$$$$00000001                 0x000000bc   Section        4  entry2.o(.ARM.Collect$$$$00000001)
+    .ARM.Collect$$$$00000004                 0x000000c0   Section        4  entry5.o(.ARM.Collect$$$$00000004)
+    .ARM.Collect$$$$00000008                 0x000000c4   Section        0  entry7b.o(.ARM.Collect$$$$00000008)
+    .ARM.Collect$$$$0000000A                 0x000000c4   Section        0  entry8b.o(.ARM.Collect$$$$0000000A)
+    .ARM.Collect$$$$0000000B                 0x000000c4   Section        8  entry9a.o(.ARM.Collect$$$$0000000B)
+    __lit__00000000                          0x000000cc   Data           4  entry2.o(.ARM.Collect$$$$00002712)
+    .ARM.Collect$$$$0000000D                 0x000000cc   Section        0  entry10a.o(.ARM.Collect$$$$0000000D)
+    .ARM.Collect$$$$0000000F                 0x000000cc   Section        0  entry11a.o(.ARM.Collect$$$$0000000F)
+    .ARM.Collect$$$$00002712                 0x000000cc   Section        4  entry2.o(.ARM.Collect$$$$00002712)
+    .text                                    0x000000d0   Section       40  startup_apm32f0xx.o(.text)
+    .text                                    0x000000f8   Section        0  uidiv_div0.o(.text)
+    .text                                    0x00000138   Section       36  init.o(.text)
+    [Anonymous Symbol]                       0x0000015c   Section        0  main.o(.text.ADCCalibration)
+    [Anonymous Symbol]                       0x000001b0   Section        0  main.o(.text.ADCMeasure)
+    __arm_cp.3_0                             0x00000224   Number         4  main.o(.text.ADCMeasure)
+    __arm_cp.3_2                             0x00000234   Number         4  main.o(.text.ADCMeasure)
+    [Anonymous Symbol]                       0x00000238   Section        0  apm32f00x_adc.o(.text.ADC_ClearStatusFlag)
+    [Anonymous Symbol]                       0x00000258   Section        0  apm32f00x_adc.o(.text.ADC_Config)
+    __arm_cp.1_0                             0x00000308   Number         4  apm32f00x_adc.o(.text.ADC_Config)
+    [Anonymous Symbol]                       0x0000030c   Section        0  apm32f00x_adc.o(.text.ADC_ConfigStructInit)
+    [Anonymous Symbol]                       0x0000031c   Section        0  apm32f00x_adc.o(.text.ADC_Disable)
+    [Anonymous Symbol]                       0x00000328   Section        0  apm32f00x_adc.o(.text.ADC_DisableCompensation)
+    [Anonymous Symbol]                       0x00000334   Section        0  apm32f00x_adc.o(.text.ADC_Enable)
+    [Anonymous Symbol]                       0x00000340   Section        0  apm32f00x_adc.o(.text.ADC_EnableCompensation)
+    [Anonymous Symbol]                       0x0000034c   Section        0  apm32f00x_int.o(.text.ADC_IRQHandler)
+    [Anonymous Symbol]                       0x00000350   Section        0  apm32f00x_adc.o(.text.ADC_ReadData)
+    __arm_cp.22_0                            0x00000380   Number         4  apm32f00x_adc.o(.text.ADC_ReadData)
+    [Anonymous Symbol]                       0x00000384   Section        0  apm32f00x_adc.o(.text.ADC_ReadStatusFlag)
+    __arm_cp.29_0                            0x000003a0   Number         4  apm32f00x_adc.o(.text.ADC_ReadStatusFlag)
+    [Anonymous Symbol]                       0x000003a4   Section        0  apm32f00x_adc.o(.text.ADC_SetMode)
+    __arm_cp.8_0                             0x000003b8   Number         4  apm32f00x_adc.o(.text.ADC_SetMode)
+    [Anonymous Symbol]                       0x000003bc   Section        0  apm32f00x_adc.o(.text.ADC_SetOffset)
+    __arm_cp.36_0                            0x000003c8   Number         4  apm32f00x_adc.o(.text.ADC_SetOffset)
+    [Anonymous Symbol]                       0x000003cc   Section        0  apm32f00x_adc.o(.text.ADC_StartConversion)
+    __arm_cp.21_0                            0x000003d8   Number         4  apm32f00x_adc.o(.text.ADC_StartConversion)
+    [Anonymous Symbol]                       0x000003dc   Section        0  board.o(.text.Board_LedInit)
+    [Anonymous Symbol]                       0x000003fc   Section        0  board.o(.text.Board_LedOff)
+    [Anonymous Symbol]                       0x00000410   Section        0  board.o(.text.Board_LedOn)
+    __arm_cp.1_0                             0x00000424   Number         4  board.o(.text.Board_LedOn)
+    [Anonymous Symbol]                       0x00000428   Section        0  apm32f00x_gpio.o(.text.GPIO_ClearBit)
+    [Anonymous Symbol]                       0x00000430   Section        0  apm32f00x_gpio.o(.text.GPIO_Config)
+    [Anonymous Symbol]                       0x000004a2   Section        0  apm32f00x_gpio.o(.text.GPIO_SetBit)
+    [Anonymous Symbol]                       0x000004aa   Section        0  apm32f00x_int.o(.text.HardFault_Handler)
+    [Anonymous Symbol]                       0x000004ac   Section        0  apm32f00x_int.o(.text.NMI_Handler)
+    [Anonymous Symbol]                       0x000004ae   Section        0  apm32f00x_int.o(.text.PendSV_Handler)
+    [Anonymous Symbol]                       0x000004b0   Section        0  apm32f00x_rcm.o(.text.RCM_GetMasterClockFreq)
+    __arm_cp.24_1                            0x000004f4   Number         4  apm32f00x_rcm.o(.text.RCM_GetMasterClockFreq)
+    __arm_cp.24_2                            0x000004f8   Number         4  apm32f00x_rcm.o(.text.RCM_GetMasterClockFreq)
+    [Anonymous Symbol]                       0x000004fc   Section        0  apm32f00x_int.o(.text.SVC_Handler)
+    [Anonymous Symbol]                       0x00000500   Section        0  usart_app.o(.text.SerialPrint_NumString)
+    [Anonymous Symbol]                       0x000005b0   Section        0  usart_app.o(.text.Serial_begin)
+    [Anonymous Symbol]                       0x000005d8   Section        0  apm32f00x_int.o(.text.SysTick_Handler)
+    [Anonymous Symbol]                       0x000005dc   Section        0  system_apm32f00x.o(.text.SystemInit)
+    __arm_cp.0_0                             0x00000648   Number         4  system_apm32f00x.o(.text.SystemInit)
+    __arm_cp.0_1                             0x0000064c   Number         4  system_apm32f00x.o(.text.SystemInit)
+    __arm_cp.0_2                             0x00000650   Number         4  system_apm32f00x.o(.text.SystemInit)
+    [Anonymous Symbol]                       0x00000654   Section        0  apm32f00x_usart.o(.text.USART_Config)
+    __arm_cp.1_0                             0x00000728   Number         4  apm32f00x_usart.o(.text.USART_Config)
+    __arm_cp.1_1                             0x0000072c   Number         4  apm32f00x_usart.o(.text.USART_Config)
+    [Anonymous Symbol]                       0x00000730   Section        0  apm32f00x_usart.o(.text.USART_Enable)
+    [Anonymous Symbol]                       0x0000073a   Section        0  apm32f00x_usart.o(.text.USART_ReadStatusFlag)
+    [Anonymous Symbol]                       0x00000762   Section        0  apm32f00x_usart.o(.text.USART_TxData8)
+    [Anonymous Symbol]                       0x00000770   Section        0  main.o(.text.main)
+    __arm_cp.0_0                             0x000007d8   Number         4  main.o(.text.main)
+    i.__scatterload_copy                     0x000007dc   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x000007ea   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x000007ec   Section       14  handlers.o(i.__scatterload_zeroinit)
+    STACK                                    0x20000000   Section     1024  startup_apm32f0xx.o(STACK)
+
+    Global Symbols
+
+    Symbol Name                              Value     Ov Type        Size  Object(Section)
+
+    BuildAttributes$$THM_ISAv3M$S$PE$A:L22$X:L11$S22$IEEE1$IW$~IW$USESV6$~STKCKD$USESV7$~SHL$OTIME$EBA8$MICROLIB$REQ8$PRES8$EABIv2 0x00000000   Number         0  anon$$obj.o ABSOLUTE
+    __Vectors                                0x00000000   Data           4  startup_apm32f0xx.o(RESET)
+    __cpp_initialize__aeabi_                  - Undefined Weak Reference
+    __cxa_finalize                            - Undefined Weak Reference
+    __decompress                              - Undefined Weak Reference
+    _clock_init                               - Undefined Weak Reference
+    _microlib_exit                            - Undefined Weak Reference
+    __Vectors_End                            0x000000bc   Data           0  startup_apm32f0xx.o(RESET)
+    __Vectors_Size                           0x000000bc   Number         0  startup_apm32f0xx.o ABSOLUTE
+    __main                                   0x000000bd   Thumb Code     0  entry.o(.ARM.Collect$$$$00000000)
+    _main_stk                                0x000000bd   Thumb Code     0  entry2.o(.ARM.Collect$$$$00000001)
+    _main_scatterload                        0x000000c1   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    __main_after_scatterload                 0x000000c5   Thumb Code     0  entry5.o(.ARM.Collect$$$$00000004)
+    _main_clock                              0x000000c5   Thumb Code     0  entry7b.o(.ARM.Collect$$$$00000008)
+    _main_cpp_init                           0x000000c5   Thumb Code     0  entry8b.o(.ARM.Collect$$$$0000000A)
+    _main_init                               0x000000c5   Thumb Code     0  entry9a.o(.ARM.Collect$$$$0000000B)
+    __rt_final_cpp                           0x000000cd   Thumb Code     0  entry10a.o(.ARM.Collect$$$$0000000D)
+    __rt_final_exit                          0x000000cd   Thumb Code     0  entry11a.o(.ARM.Collect$$$$0000000F)
+    Reset_Handler                            0x000000d1   Thumb Code    14  startup_apm32f0xx.o(.text)
+    EINTA_IRQHandler                         0x000000e9   Thumb Code     0  startup_apm32f0xx.o(.text)
+    EINTB_IRQHandler                         0x000000e9   Thumb Code     0  startup_apm32f0xx.o(.text)
+    EINTC_IRQHandler                         0x000000e9   Thumb Code     0  startup_apm32f0xx.o(.text)
+    EINTD_IRQHandler                         0x000000e9   Thumb Code     0  startup_apm32f0xx.o(.text)
+    FLASH_IRQHandler                         0x000000e9   Thumb Code     0  startup_apm32f0xx.o(.text)
+    IIC_IRQHandler                           0x000000e9   Thumb Code     0  startup_apm32f0xx.o(.text)
+    RCM_IRQHandler                           0x000000e9   Thumb Code     0  startup_apm32f0xx.o(.text)
+    SPI_IRQHandler                           0x000000e9   Thumb Code     0  startup_apm32f0xx.o(.text)
+    TMR1A_CC_IRQHandler                      0x000000e9   Thumb Code     0  startup_apm32f0xx.o(.text)
+    TMR1A_UT_IRQHandler                      0x000000e9   Thumb Code     0  startup_apm32f0xx.o(.text)
+    TMR1_CC_IRQHandler                       0x000000e9   Thumb Code     0  startup_apm32f0xx.o(.text)
+    TMR1_UT_IRQHandler                       0x000000e9   Thumb Code     0  startup_apm32f0xx.o(.text)
+    TMR2_CC_IRQHandler                       0x000000e9   Thumb Code     0  startup_apm32f0xx.o(.text)
+    TMR2_UO_IRQHandler                       0x000000e9   Thumb Code     0  startup_apm32f0xx.o(.text)
+    TMR4_IRQHandler                          0x000000e9   Thumb Code     0  startup_apm32f0xx.o(.text)
+    USART1_RX_IRQHandler                     0x000000e9   Thumb Code     0  startup_apm32f0xx.o(.text)
+    USART1_TX_IRQHandler                     0x000000e9   Thumb Code     0  startup_apm32f0xx.o(.text)
+    USART2_RX_IRQHandler                     0x000000e9   Thumb Code     0  startup_apm32f0xx.o(.text)
+    USART2_TX_IRQHandler                     0x000000e9   Thumb Code     0  startup_apm32f0xx.o(.text)
+    USART3_RX_IRQHandler                     0x000000e9   Thumb Code     0  startup_apm32f0xx.o(.text)
+    USART3_TX_IRQHandler                     0x000000e9   Thumb Code     0  startup_apm32f0xx.o(.text)
+    WUPT_IRQHandler                          0x000000e9   Thumb Code     0  startup_apm32f0xx.o(.text)
+    __aeabi_uidiv                            0x000000f9   Thumb Code     0  uidiv_div0.o(.text)
+    __aeabi_uidivmod                         0x000000f9   Thumb Code    62  uidiv_div0.o(.text)
+    __scatterload                            0x00000139   Thumb Code    28  init.o(.text)
+    __scatterload_rt2                        0x00000139   Thumb Code     0  init.o(.text)
+    ADCCalibration                           0x0000015d   Thumb Code    84  main.o(.text.ADCCalibration)
+    ADCMeasure                               0x000001b1   Thumb Code   116  main.o(.text.ADCMeasure)
+    ADC_ClearStatusFlag                      0x00000239   Thumb Code    32  apm32f00x_adc.o(.text.ADC_ClearStatusFlag)
+    ADC_Config                               0x00000259   Thumb Code   176  apm32f00x_adc.o(.text.ADC_Config)
+    ADC_ConfigStructInit                     0x0000030d   Thumb Code    16  apm32f00x_adc.o(.text.ADC_ConfigStructInit)
+    ADC_Disable                              0x0000031d   Thumb Code    12  apm32f00x_adc.o(.text.ADC_Disable)
+    ADC_DisableCompensation                  0x00000329   Thumb Code    12  apm32f00x_adc.o(.text.ADC_DisableCompensation)
+    ADC_Enable                               0x00000335   Thumb Code    12  apm32f00x_adc.o(.text.ADC_Enable)
+    ADC_EnableCompensation                   0x00000341   Thumb Code    12  apm32f00x_adc.o(.text.ADC_EnableCompensation)
+    ADC_IRQHandler                           0x0000034d   Thumb Code     2  apm32f00x_int.o(.text.ADC_IRQHandler)
+    ADC_ReadData                             0x00000351   Thumb Code    48  apm32f00x_adc.o(.text.ADC_ReadData)
+    ADC_ReadStatusFlag                       0x00000385   Thumb Code    28  apm32f00x_adc.o(.text.ADC_ReadStatusFlag)
+    ADC_SetMode                              0x000003a5   Thumb Code    20  apm32f00x_adc.o(.text.ADC_SetMode)
+    ADC_SetOffset                            0x000003bd   Thumb Code    12  apm32f00x_adc.o(.text.ADC_SetOffset)
+    ADC_StartConversion                      0x000003cd   Thumb Code    12  apm32f00x_adc.o(.text.ADC_StartConversion)
+    Board_LedInit                            0x000003dd   Thumb Code    32  board.o(.text.Board_LedInit)
+    Board_LedOff                             0x000003fd   Thumb Code    20  board.o(.text.Board_LedOff)
+    Board_LedOn                              0x00000411   Thumb Code    20  board.o(.text.Board_LedOn)
+    GPIO_ClearBit                            0x00000429   Thumb Code     8  apm32f00x_gpio.o(.text.GPIO_ClearBit)
+    GPIO_Config                              0x00000431   Thumb Code   114  apm32f00x_gpio.o(.text.GPIO_Config)
+    GPIO_SetBit                              0x000004a3   Thumb Code     8  apm32f00x_gpio.o(.text.GPIO_SetBit)
+    HardFault_Handler                        0x000004ab   Thumb Code     2  apm32f00x_int.o(.text.HardFault_Handler)
+    NMI_Handler                              0x000004ad   Thumb Code     2  apm32f00x_int.o(.text.NMI_Handler)
+    PendSV_Handler                           0x000004af   Thumb Code     2  apm32f00x_int.o(.text.PendSV_Handler)
+    RCM_GetMasterClockFreq                   0x000004b1   Thumb Code    68  apm32f00x_rcm.o(.text.RCM_GetMasterClockFreq)
+    SVC_Handler                              0x000004fd   Thumb Code     2  apm32f00x_int.o(.text.SVC_Handler)
+    SerialPrint_NumString                    0x00000501   Thumb Code   176  usart_app.o(.text.SerialPrint_NumString)
+    Serial_begin                             0x000005b1   Thumb Code    40  usart_app.o(.text.Serial_begin)
+    SysTick_Handler                          0x000005d9   Thumb Code     2  apm32f00x_int.o(.text.SysTick_Handler)
+    SystemInit                               0x000005dd   Thumb Code   108  system_apm32f00x.o(.text.SystemInit)
+    USART_Config                             0x00000655   Thumb Code   212  apm32f00x_usart.o(.text.USART_Config)
+    USART_Enable                             0x00000731   Thumb Code    10  apm32f00x_usart.o(.text.USART_Enable)
+    USART_ReadStatusFlag                     0x0000073b   Thumb Code    40  apm32f00x_usart.o(.text.USART_ReadStatusFlag)
+    USART_TxData8                            0x00000763   Thumb Code    12  apm32f00x_usart.o(.text.USART_TxData8)
+    main                                     0x00000771   Thumb Code   104  main.o(.text.main)
+    __scatterload_copy                       0x000007dd   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x000007eb   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x000007ed   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    g_ledGPIO                                0x000007fc   Data          16  board.o(.rodata.g_ledGPIO)
+    Region$$Table$$Base                      0x0000080c   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x0000081c   Number         0  anon$$obj.o(Region$$Table)
+    __initial_sp                             0x20000400   Data           0  startup_apm32f0xx.o(STACK)
+
+
+
+==============================================================================
+
+Memory Map of the image
+
+  Image Entry point : 0x000000bd
+
+  Load Region LR_IROM1 (Base: 0x00000000, Size: 0x0000081c, Max: 0x00008000, ABSOLUTE)
+
+    Execution Region ER_IROM1 (Exec base: 0x00000000, Load base: 0x00000000, Size: 0x0000081c, Max: 0x00008000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x00000000   0x00000000   0x000000bc   Data   RO           11    RESET               startup_apm32f0xx.o
+    0x000000bc   0x000000bc   0x00000000   Code   RO         1003  * .ARM.Collect$$$$00000000  mc_p.l(entry.o)
+    0x000000bc   0x000000bc   0x00000004   Code   RO         1012    .ARM.Collect$$$$00000001  mc_p.l(entry2.o)
+    0x000000c0   0x000000c0   0x00000004   Code   RO         1015    .ARM.Collect$$$$00000004  mc_p.l(entry5.o)
+    0x000000c4   0x000000c4   0x00000000   Code   RO         1017    .ARM.Collect$$$$00000008  mc_p.l(entry7b.o)
+    0x000000c4   0x000000c4   0x00000000   Code   RO         1019    .ARM.Collect$$$$0000000A  mc_p.l(entry8b.o)
+    0x000000c4   0x000000c4   0x00000008   Code   RO         1020    .ARM.Collect$$$$0000000B  mc_p.l(entry9a.o)
+    0x000000cc   0x000000cc   0x00000000   Code   RO         1022    .ARM.Collect$$$$0000000D  mc_p.l(entry10a.o)
+    0x000000cc   0x000000cc   0x00000000   Code   RO         1024    .ARM.Collect$$$$0000000F  mc_p.l(entry11a.o)
+    0x000000cc   0x000000cc   0x00000004   Code   RO         1013    .ARM.Collect$$$$00002712  mc_p.l(entry2.o)
+    0x000000d0   0x000000d0   0x00000028   Code   RO           12    .text               startup_apm32f0xx.o
+    0x000000f8   0x000000f8   0x0000003e   Code   RO         1030    .text               mc_p.l(uidiv_div0.o)
+    0x00000136   0x00000136   0x00000002   PAD
+    0x00000138   0x00000138   0x00000024   Code   RO         1036    .text               mc_p.l(init.o)
+    0x0000015c   0x0000015c   0x00000054   Code   RO          972    .text.ADCCalibration  main.o
+    0x000001b0   0x000001b0   0x00000088   Code   RO          970    .text.ADCMeasure    main.o
+    0x00000238   0x00000238   0x00000020   Code   RO           79    .text.ADC_ClearStatusFlag  apm32f00x_adc.o
+    0x00000258   0x00000258   0x000000b4   Code   RO           21    .text.ADC_Config    apm32f00x_adc.o
+    0x0000030c   0x0000030c   0x00000010   Code   RO           25    .text.ADC_ConfigStructInit  apm32f00x_adc.o
+    0x0000031c   0x0000031c   0x0000000c   Code   RO           33    .text.ADC_Disable   apm32f00x_adc.o
+    0x00000328   0x00000328   0x0000000c   Code   RO           87    .text.ADC_DisableCompensation  apm32f00x_adc.o
+    0x00000334   0x00000334   0x0000000c   Code   RO           31    .text.ADC_Enable    apm32f00x_adc.o
+    0x00000340   0x00000340   0x0000000c   Code   RO           85    .text.ADC_EnableCompensation  apm32f00x_adc.o
+    0x0000034c   0x0000034c   0x00000002   Code   RO          995    .text.ADC_IRQHandler  apm32f00x_int.o
+    0x0000034e   0x0000034e   0x00000002   PAD
+    0x00000350   0x00000350   0x00000034   Code   RO           63    .text.ADC_ReadData  apm32f00x_adc.o
+    0x00000384   0x00000384   0x00000020   Code   RO           77    .text.ADC_ReadStatusFlag  apm32f00x_adc.o
+    0x000003a4   0x000003a4   0x00000018   Code   RO           35    .text.ADC_SetMode   apm32f00x_adc.o
+    0x000003bc   0x000003bc   0x00000010   Code   RO           91    .text.ADC_SetOffset  apm32f00x_adc.o
+    0x000003cc   0x000003cc   0x00000010   Code   RO           61    .text.ADC_StartConversion  apm32f00x_adc.o
+    0x000003dc   0x000003dc   0x00000020   Code   RO          922    .text.Board_LedInit  board.o
+    0x000003fc   0x000003fc   0x00000014   Code   RO          926    .text.Board_LedOff  board.o
+    0x00000410   0x00000410   0x00000018   Code   RO          924    .text.Board_LedOn   board.o
+    0x00000428   0x00000428   0x00000008   Code   RO          125    .text.GPIO_ClearBit  apm32f00x_gpio.o
+    0x00000430   0x00000430   0x00000072   Code   RO          117    .text.GPIO_Config   apm32f00x_gpio.o
+    0x000004a2   0x000004a2   0x00000008   Code   RO          123    .text.GPIO_SetBit   apm32f00x_gpio.o
+    0x000004aa   0x000004aa   0x00000002   Code   RO          987    .text.HardFault_Handler  apm32f00x_int.o
+    0x000004ac   0x000004ac   0x00000002   Code   RO          985    .text.NMI_Handler   apm32f00x_int.o
+    0x000004ae   0x000004ae   0x00000002   Code   RO          991    .text.PendSV_Handler  apm32f00x_int.o
+    0x000004b0   0x000004b0   0x0000004c   Code   RO          386    .text.RCM_GetMasterClockFreq  apm32f00x_rcm.o
+    0x000004fc   0x000004fc   0x00000002   Code   RO          989    .text.SVC_Handler   apm32f00x_int.o
+    0x000004fe   0x000004fe   0x00000002   PAD
+    0x00000500   0x00000500   0x000000b0   Code   RO          946    .text.SerialPrint_NumString  usart_app.o
+    0x000005b0   0x000005b0   0x00000028   Code   RO          944    .text.Serial_begin  usart_app.o
+    0x000005d8   0x000005d8   0x00000002   Code   RO          993    .text.SysTick_Handler  apm32f00x_int.o
+    0x000005da   0x000005da   0x00000002   PAD
+    0x000005dc   0x000005dc   0x00000078   Code   RO            2    .text.SystemInit    system_apm32f00x.o
+    0x00000654   0x00000654   0x000000dc   Code   RO          798    .text.USART_Config  apm32f00x_usart.o
+    0x00000730   0x00000730   0x0000000a   Code   RO          804    .text.USART_Enable  apm32f00x_usart.o
+    0x0000073a   0x0000073a   0x00000028   Code   RO          860    .text.USART_ReadStatusFlag  apm32f00x_usart.o
+    0x00000762   0x00000762   0x0000000c   Code   RO          844    .text.USART_TxData8  apm32f00x_usart.o
+    0x0000076e   0x0000076e   0x00000002   PAD
+    0x00000770   0x00000770   0x0000006c   Code   RO          964    .text.main          main.o
+    0x000007dc   0x000007dc   0x0000000e   Code   RO         1040    i.__scatterload_copy  mc_p.l(handlers.o)
+    0x000007ea   0x000007ea   0x00000002   Code   RO         1041    i.__scatterload_null  mc_p.l(handlers.o)
+    0x000007ec   0x000007ec   0x0000000e   Code   RO         1042    i.__scatterload_zeroinit  mc_p.l(handlers.o)
+    0x000007fa   0x000007fa   0x00000002   PAD
+    0x000007fc   0x000007fc   0x00000010   Data   RO          934    .rodata.g_ledGPIO   board.o
+    0x0000080c   0x0000080c   0x00000010   Data   RO         1039    Region$$Table       anon$$obj.o
+
+
+    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x0000081c, Size: 0x00000400, Max: 0x00001000, ABSOLUTE)
+
+    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+
+    0x20000000        -       0x00000400   Zero   RW            9    STACK               startup_apm32f0xx.o
+
+
+==============================================================================
+
+Image component sizes
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
+
+       416         24          0          0          0      11022   apm32f00x_adc.o
+       130          0          0          0          0       5852   apm32f00x_gpio.o
+        12          0          0          0          0        874   apm32f00x_int.o
+        76          8          0          0          0      10404   apm32f00x_rcm.o
+       282          8          0          0          0      11159   apm32f00x_usart.o
+        76          4         16          0          0       5471   board.o
+       328         24          0          0          0       6798   main.o
+        40         14        188          0       1024        828   startup_apm32f0xx.o
+       120         12          0          0          0       5089   system_apm32f00x.o
+       216          0          0          0          0       6020   usart_app.o
+
+    ----------------------------------------------------------------------
+      1704         94        220          0       1024      63517   Object Totals
+         0          0         16          0          0          0   (incl. Generated)
+         8          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
+
+         0          0          0          0          0          0   entry.o
+         0          0          0          0          0          0   entry10a.o
+         0          0          0          0          0          0   entry11a.o
+         8          4          0          0          0          0   entry2.o
+         4          0          0          0          0          0   entry5.o
+         0          0          0          0          0          0   entry7b.o
+         0          0          0          0          0          0   entry8b.o
+         8          4          0          0          0          0   entry9a.o
+        30          0          0          0          0          0   handlers.o
+        36          8          0          0          0         68   init.o
+        62          0          0          0          0         72   uidiv_div0.o
+
+    ----------------------------------------------------------------------
+       152         16          0          0          0        140   Library Totals
+         4          0          0          0          0          0   (incl. Padding)
+
+    ----------------------------------------------------------------------
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
+
+       148         16          0          0          0        140   mc_p.l
+
+    ----------------------------------------------------------------------
+       152         16          0          0          0        140   Library Totals
+
+    ----------------------------------------------------------------------
+
+==============================================================================
+
+
+      Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
+
+      1856        110        220          0       1024      63649   Grand Totals
+      1856        110        220          0       1024      63649   ELF Image Totals
+      1856        110        220          0          0          0   ROM Totals
+
+==============================================================================
+
+    Total RO  Size (Code + RO Data)                 2076 (   2.03kB)
+    Total RW  Size (RW Data + ZI Data)              1024 (   1.00kB)
+    Total ROM Size (Code + RO Data + RW Data)       2076 (   2.03kB)
+
+==============================================================================
+

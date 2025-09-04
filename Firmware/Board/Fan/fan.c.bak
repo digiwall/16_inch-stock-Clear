@@ -1,0 +1,186 @@
+#include "fan.h"
+
+extern BOOL SMPS_detector;
+extern BOOL btn_blink_flag;
+extern uint16_t btn_blink_time;
+
+device fan, light;
+FAN_keypad key;
+
+// Speed Arrays
+const uint16_t speed_array[5] = {340, 490, 630, 760, 1000}; // Speed 5
+const uint16_t smps_speed_array[5] = {290, 430, 575, 740, 1000}; // Speed 5
+
+// Variables
+uint8_t BTN_Step = 0;
+uint8_t hold_BTN_Flag = 0;
+volatile BOOL lowVoltShutdown = 0;
+BOOL AnyChange = 0;
+uint8_t keyStep = 0;
+uint8_t speed_status = 0;
+
+// Initialization Functions
+void indicator_init(void) {
+    GPIO_Config_T gpioConfig;
+
+    // Light GPIO configuration
+    gpioConfig.mode = GPIO_MODE_OUT_PP;
+    gpioConfig.pin = Light_pin;
+    gpioConfig.speed = GPIO_SPEED_10MHz;
+    GPIO_Config(Light_Port, &gpioConfig);
+
+    // Green LED GPIO configuration
+    gpioConfig.pin = LED_GREEN_pin;
+    GPIO_Config(LED_GREEN_Port, &gpioConfig);
+}
+
+void charge_detector_interrupt_init(void) {
+    GPIO_Config_T gpioConfig;
+
+    // Charging input GPIO configuration
+    gpioConfig.mode = GPIO_MODE_IN_FLOATING;
+    gpioConfig.intEn = GPIO_EINT_ENABLE;
+    gpioConfig.pin = Charging_input_pin;
+    EINT_Config(EINT_PORT_B, EINT_TRIGGER_RISING);
+    GPIO_Config(Charging_input_Port, &gpioConfig);
+    NVIC_EnableIRQRequest(EINTB_IRQn, 0x01);
+
+    // Charge signal GPIO configuration
+    gpioConfig.mode = GPIO_MODE_OUT_PP;
+    gpioConfig.pin = Charge_signal_pin;
+    gpioConfig.speed = GPIO_SPEED_10MHz;
+    GPIO_Config(Charge_signal_Port, &gpioConfig);
+}
+
+void fan_init(void) {
+    GPIO_Config_T fan_config;
+
+    // Fan GPIO configuration
+    fan_config.mode = GPIO_MODE_OUT_PP;
+    fan_config.pin = Fan_pin;
+    fan_config.speed = GPIO_SPEED_10MHz;
+    GPIO_Config(Fan_Port, &fan_config);
+
+    fan_shutdown();
+    fan.status = 0x00;
+    BTN_Step = 0;
+    key.PS_step = 0;
+
+    TMR2_Disable();
+}
+
+// Fan Control Functions
+void fan_enable(void) {
+    if (BatVolt > BAT_VOLT_FAN_OFF) {
+        
+        TMR2_OCConfig_T ocConfigStruct;
+        // Timer configuration
+        TMR2_ConfigTimerBase(0, 1000);
+        ocConfigStruct.channel = TMR2_CHANNEL_3;
+        ocConfigStruct.count = 0x00;
+        ocConfigStruct.mode = TMR2_OC_MODE_PWM1;
+        ocConfigStruct.OCxOutputState = TMR2_OC_OUTPUT_ENABLE;
+        ocConfigStruct.OCxPolarity = TMR2_OC_POLARITY_HIGH;
+        TMR2_ConfigOutputCompare(&ocConfigStruct);
+        TMR2_Enable();
+    }
+}
+
+void fan_speed_cal(uint8_t keyStep_p) {
+    if (SMPS_detector == FALSE) {
+        fan.Speed = speed_array[keyStep_p];
+        SerialPrint_NumString("Button Up Speed", fan.Speed);
+    } else {
+        fan.Speed = smps_speed_array[keyStep_p];
+        SerialPrint_NumString("SMPS_fan.Speed", fan.Speed);
+    }
+}
+
+void fan_command(uint16_t pwm_duty) {
+    if (speed_status == 1) {
+        fan.Speed = (SMPS_detector == FALSE) ? rmtFAN_START : FAN_SpeedMIN_SMPS;
+    }
+
+    if (speed_status == 2 && AnyChange == TRUE) {
+        AnyChange = FALSE;
+        fan_speed_cal(keyStep);
+    }
+
+    if (speed_status == 3) {
+        fan.Speed = (SMPS_detector == FALSE) ? btnFAN_START : SMPS_btnFAN_START;
+    }
+
+    if (speed_status == 4 && AnyChange == TRUE) {
+        AnyChange = FALSE;
+        fan_speed_cal(keyStep);
+    }
+
+    if (speed_status == 5 && AnyChange == TRUE) {
+        AnyChange = FALSE;
+        fan_speed_cal(keyStep);
+    }
+
+    pwm_duty = fan.Speed;
+
+    if (pwm_duty > FAN_SpeedMAX) {
+        pwm_duty = FAN_SpeedMAX;
+    } else if (pwm_duty < FAN_SpeedMIN && pwm_duty > 0) {
+        pwm_duty = (SMPS_detector == FALSE) ? FAN_SpeedMIN : FAN_SpeedMIN_SMPS;
+    }
+
+    #if MOSFET_N == 1
+        TMR2_SetCompareCapture(TMR2_CHANNEL_3, pwm_duty);
+    #else
+        pwm_duty = FAN_SpeedMAX - pwm_duty;
+        TMR2_SetCompareCapture(TMR2_CHANNEL_3, pwm_duty);
+    #endif
+}
+
+void fan_shutdown(void) {
+    fan.Speed = 0x00;
+    fan_command(fan.Speed);
+    fan.status = 0x00;
+    BTN_Step = 0;
+    hold_BTN_Flag = 0;
+    key.timerFlag = FALSE;
+    btnTim_sec = 0;
+    key.Timer_step = FALSE;
+    TMR2_SetCompareCapture(TMR2_CHANNEL_3, 0);
+    Fan_OFF;
+}
+
+void Fan_Load(uint16_t pwm_duty) {
+    if ((lowVoltShutdown == FALSE) && (fan.status & LowVoltFanOFF)) {
+        fan.status = bitClear(fan.status, LowVoltFanOFF);
+        fan_init();
+    }
+
+    if ((fan.status & FanRunMode) && (!(fan.status & LowVoltFanOFF))) {
+        fan_command(pwm_duty);
+        sleepDelay = 0;
+    }
+}
+
+// Sleep Mode
+void sleepMode(void) {
+    Sleepflag = TRUE;
+    sleepRMTinit = FALSE;
+    remotSleepflag = TRUE;
+    LED_GREEN_OFF;
+    Charge_signal_OFF;
+    init = FALSE;
+    Light_OFF;
+    fan_shutdown();
+    delay_ms(10);
+
+    if (!(GPIO_ReadInputBit(Charging_input_Port, Charging_input_pin))) {
+        SerialPrint_NumString("Sleep Mode On", 1);
+        NVIC_DisableIRQ(TMR4_IRQn);
+        PMU_EnterHaltModeWFI();
+        delay_ms(10);
+        NVIC_DisableIRQ(TMR4_IRQn);
+        PMU_EnterHaltModeWFI();
+    } else {
+        SerialPrint_NumString("Power On", 1);
+    }
+}
